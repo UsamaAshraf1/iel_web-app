@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Who We Are</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Slick CSS -->
+  </head>
+
+  <body>
+    <div
+      style="
+        background: linear-gradient(
+          270deg,
+          rgba(164, 255, 204, 1) 0%,
+          rgba(255, 255, 255, 1) 55%
+        );
+      "
+    >
+      <div class="pt-10">
+        <div
+          class="mx-[7vw] bg-white rounded-[24px] shadow-[0_0_12px_0_#9D9D9D59] p-5 md:p-[18px]"
+        >
+          <div class="flex items-center justify-between">
+            <!-- Logo -->
+            <div>
+              <img
+                src="./Assets/logo.png"
+                alt="IEL Trade"
+                class="w-[154px] h-[50px] object-contain"
+              />
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-10">
+              <ul class="flex items-center gap-8 lg:gap-10">
+                <li>
+                  <a
+                    href="#"
+                    class="text-[#53BA83] font-[600] text-[16px] leading-[21px] hover:text-[#53BA83] transition-colors duration-200"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-[#0B1B0C] font-[600] text-[16px] leading-[21px] hover:text-[#53BA83] transition-colors duration-200"
+                  >
+                    Learn
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-[#0B1B0C] font-[600] text-[16px] leading-[21px] hover:text-[#53BA83] transition-colors duration-200"
+                  >
+                    Research Reports
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-[#0B1B0C] font-[600] text-[16px] leading-[21px] hover:text-[#53BA83] transition-colors duration-200"
+                  >
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Buttons + Mobile Menu Toggle -->
+            <div class="flex items-center gap-4">
+              <!-- Desktop Buttons -->
+              <div class="hidden md:flex items-center gap-4">
+                <button
+                  class="px-[19px] py-[10px] bg-[#53BA83] text-[#FFFFFF] font-[600] text-[16px] leading-[21px] rounded-xl hover:bg-[#48a573] transition-all duration-200 shadow-[8px]"
+                >
+                  Get Started
+                </button>
+              </div>
+
+              <!-- Mobile Hamburger -->
+              <button class="md:hidden text-[#0B1B0C] focus:outline-none">
+                <svg
+                  class="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Mobile Menu (you can toggle visibility with JS) -->
+          <div class="md:hidden mt-5 hidden" id="mobile-menu">
+            <ul class="flex flex-col gap-4">
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-4 text-[#0B1B0C] font-medium hover:bg-gray-50 rounded-lg transition-colors"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-4 text-[#0B1B0C] font-medium hover:bg-gray-50 rounded-lg transition-colors"
+                >
+                  Markets
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-4 text-[#0B1B0C] font-medium hover:bg-gray-50 rounded-lg transition-colors"
+                >
+                  Portfolio
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-4 text-[#0B1B0C] font-medium hover:bg-gray-50 rounded-lg transition-colors"
+                >
+                  Research
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-4 text-[#0B1B0C] font-medium hover:bg-gray-50 rounded-lg transition-colors"
+                >
+                  About
+                </a>
+              </li>
+            </ul>
+
+            <div class="mt-6 flex flex-col gap-4 px-4">
+              <button
+                class="py-3 border-2 border-[#53BA83] text-[#53BA83] font-semibold rounded-xl hover:bg-[#53BA83] hover:text-white transition-all"
+              >
+                Login
+              </button>
+              <button
+                class="py-3 bg-[#53BA83] text-white font-semibold rounded-xl hover:bg-[#48a573] transition-all"
+              >
+                Open Account
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mx-[7vw] mt-[100px] pb-[100px]">
+        <div class="flex justify-center items-center">
+          <div class="text-center">
+            <div class="flex justify-center">
+              <div
+                class="flex justify-center items-center w-[260px] h-[48px] rounded-[40px] bg-[#FFFFFF] border border-[#726AFF33]"
+              >
+                <p class="font-[500] text-[16px] leading-[21px] text-[#726AFF]">
+                  Who we are
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h1
+                class="font-[500] text-[72px] leading-[74px] text-[#0B1B0C] mt-[1px5]"
+              >
+                <!-- Because your <span class="text-[#53BA83]"> future </span> <br />
+                deserves more than <br />
+                guesswork. -->
+                Where precision meets <br />
+                <span class="text-[#53BA83]"> purpose </span>
+              </h1>
+              <p
+                class="text-[24px] font-[500] leading-[35px] text-[#8A8A8A] mt-[15px] max-w-2xl"
+              >
+                Since 2008, we've been engineering wealth for those who refuse
+                to leave their financial future to chance. IEL Trade exists at
+                the intersection of institutional expertise and individual
+                ambition.
+              </p>
+
+              <button
+                class="mt-[23px] bg-[#53BA83] px-[19px] py-[10px] w-[220px] h-[53px] rounded-[8px] font-[600] text-[16px] leading-[21px] text-[#FFFFFF]"
+              >
+                Try Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -----------------The Architects Behind Your Wealth-------- -->
+    <div class="mt-[80px] mx-[7vw]">
+      <div class="flex flex-col justify-center items-center">
+        <div class="flex">
+          <div
+            class="flex justify-center items-center w-[135px] h-[38px] rounded-[40px] bg-[#FFFFFF] border border-[#726AFF33]"
+          >
+            <img
+              src="./Assets/icons/feature.png"
+              alt=""
+              class="w-[16px] h-[16px]"
+            />
+            <p
+              class="font-[500] text-[13px] leading-[20px] text-[#726AFF] ml-[8px]"
+            >
+              Our Team
+            </p>
+          </div>
+        </div>
+        <h1
+          class="font-[600] text-[58px] leading-[61px] text-[#0B1B0C] mt-[26px]"
+        >
+          The Architects Behind Your Wealth
+          <span class="text-[#53BA83]"> Wealth </span>
+        </h1>
+      </div>
+
+      <div class="mt-[30px] grid grid-cols-4 gap-[34px]">
+        <div>
+          <div class="bg-[#F7F7F7] h-[297px] rounded-[18px]">
+            <img
+              src="./Assets/member_1.jpg"
+              alt=""
+              class="w-full h-full object-cover rounded-[18px]"
+            />
+          </div>
+          <div class="mt-[10px]">
+            <h3 class="font-[500] text-[24px] leading-[35px] text-[#0B1B0C]">
+              <span class="text-[#53BA83]"> Noha </span> Wonders
+            </h3>
+            <p class="font-[500] text-[18px] leading-[35px] text-[#8A8A8A]">
+              Chief Executive Officer
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <div class="bg-[#F7F7F7] h-[297px] rounded-[18px]">
+            <img
+              src="./Assets/member_2.png"
+              alt=""
+              class="w-full h-full object-cover rounded-[18px]"
+            />
+          </div>
+          <div class="mt-[10px]">
+            <h3 class="font-[500] text-[24px] leading-[35px] text-[#0B1B0C]">
+              <span class="text-[#53BA83]"> Noha </span> Wonders
+            </h3>
+            <p class="font-[500] text-[18px] leading-[35px] text-[#8A8A8A]">
+              Chief Executive Officer
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <div class="bg-[#F7F7F7] h-[297px] rounded-[18px]">
+            <img
+              src="./Assets/member_3.png"
+              alt=""
+              class="w-full h-full object-cover rounded-[18px]"
+            />
+          </div>
+          <div class="mt-[10px]">
+            <h3 class="font-[500] text-[24px] leading-[35px] text-[#0B1B0C]">
+              <span class="text-[#53BA83]"> Noha </span> Wonders
+            </h3>
+            <p class="font-[500] text-[18px] leading-[35px] text-[#8A8A8A]">
+              Chief Executive Officer
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="bg-[#F7F7F7] h-[297px] rounded-[18px]">
+            <!-- <img
+              src="./Assets/member_3.png"
+              alt=""
+              class="w-full h-full object-cover rounded-[18px]"
+            /> -->
+          </div>
+          <div class="mt-[10px]">
+            <h3 class="font-[500] text-[24px] leading-[35px] text-[#0B1B0C]">
+              <span class="text-[#53BA83]"> Noha </span> Wonders
+            </h3>
+            <p class="font-[500] text-[18px] leading-[35px] text-[#8A8A8A]">
+              Chief Executive Officer
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ----------------Our Partners & Recognition-------- -->
+    <div class="mt-[80px] mx-[7vw]">
+      <div class="flex flex-col justify-center items-center">
+        <div class="flex">
+          <div
+            class="flex justify-center items-center w-[135px] h-[38px] rounded-[40px] bg-[#FFFFFF] border border-[#726AFF33]"
+          >
+            <p
+              class="font-[500] text-[13px] leading-[20px] text-[#726AFF] ml-[8px]"
+            >
+              Our Blueprint
+            </p>
+          </div>
+        </div>
+        <h1
+          class="font-[600] text-[58px] leading-[61px] text-[#0B1B0C] mt-[26px]"
+        >
+          Our <span class="text-[#53BA83]"> Partners </span> & Recognition
+        </h1>
+        <p
+          class="font-[500] text-[24px] leading-[35px] text-[#8A8A8A] mt-[26px]"
+        >
+          Validation Through Performance
+        </p>
+
+        <h1
+          class="font-[600] text-[42px] leading-[53px] text-[#474747] mt-[93px]"
+        >
+          Regulated & Recognised
+        </h1>
+      </div>
+
+      <div class="mt-[30px] grid grid-cols-4 gap-[34px]">
+        <div>
+          <div
+            class="bg-[#F7F7F7] h-[297px] rounded-[18px] px-[35px] py-[24px]"
+          >
+            <img
+              src="./Assets/partner_1.png"
+              alt=""
+              class="w-full h-full object-cover rounded-[18px]"
+            />
+          </div>
+          <div class="mt-[10px] text-center">
+            <p class="font-[500] text-[22px] leading-[35px] text-[#8A8A8A]">
+              SECP Regulated since 2008 (License #: TREC-001)
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <div
+            class="bg-[#F7F7F7] h-[297px] rounded-[18px] px-[35px] py-[24px]"
+          >
+            <img
+              src="./Assets/partner_2.png"
+              alt=""
+              class="w-full h-full object-cover rounded-[18px]"
+            />
+          </div>
+          <div class="mt-[10px] text-center">
+            <p class="font-[500] text-[22px] leading-[35px] text-[#8A8A8A]">
+              SECP Regulated since 2008 (License #: TREC-001)
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <div class="bg-[#F7F7F7] h-[297px] rounded-[18px]">
+            <!-- <img
+              src="./Assets/member_3.png"
+              alt=""
+              class="w-full h-full object-cover rounded-[18px]"
+            /> -->
+          </div>
+          <div class="mt-[10px] text-center">
+            <p class="font-[500] text-[22px] leading-[35px] text-[#8A8A8A]">
+              SECP Regulated since 2008 (License #: TREC-001)
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="bg-[#F7F7F7] h-[297px] rounded-[18px]">
+            <!-- <img
+              src="./Assets/member_3.png"
+              alt=""
+              class="w-full h-full object-cover rounded-[18px]"
+            /> -->
+          </div>
+          <div class="mt-[10px] text-center">
+            <p class="font-[500] text-[22px] leading-[35px] text-[#8A8A8A]">
+              SECP Regulated since 2008 (License #: TREC-001)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ------------------------Every person is different. Pick what works for you.---------------------------- -->
+    <div class="bg-[#062B08] mt-[58px] py-[100px] px-[7vw]">
+      <div class="flex justify-center">
+        <div
+          class="flex justify-center items-center w-[135px] h-[38px] rounded-[40px] bg-[#726AFF1A] border border-[#726AFF33]"
+        >
+          <img
+            src="./Assets/icons/email.png"
+            alt=""
+            class="w-[16px] h-[16px]"
+          />
+          <p
+            class="font-[500] text-[13px] leading-[20px] text-[#726AFF] ml-[8px]"
+          >
+            Get In Touch
+          </p>
+        </div>
+      </div>
+
+      <h1
+        class="font-[700] text-[56px] leading-[62px] text-[#FFFFFF] text-center"
+      >
+        Every person is different. <br />
+        Pick what works for you.
+      </h1>
+      <p
+        class="font-[400] text-[18px] leading-[29px] text-[#FFFFFFB2] text-center mt-[20px]"
+      >
+        Real people, not chatbots. Questions answered in Urdu, English, or
+        Punjabi— <br />whatever makes you comfortable.
+      </p>
+
+      <div
+        class="p-[50px] bg-[#FFFFFF0D] border-[2px] border-[#FFFFFF1A] mt-[60px] rounded-[32px]"
+      >
+        <div class="grid grid-cols-2 gap-[20px]">
+          <div>
+            <label
+              class="font-[600] text-[13px] leading-[20px] text-[#FFFFFFE5]"
+              >FULL NAME *</label
+            >
+            <br />
+            <input
+              type="text"
+              name=""
+              placeholder="John Doe"
+              id=""
+              class="mt-[12px] bg-[#FFFFFF1A] h-[56px] rounded-[14px] w-full border-[2px] border-[#FFFFFF33] px-[10px] text-white"
+            />
+          </div>
+          <div>
+            <label
+              class="font-[600] text-[13px] leading-[20px] text-[#FFFFFFE5]"
+              >EMAIL ADDRESS *</label
+            >
+            <br />
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder="john@example.com"
+              class="mt-[12px] bg-[#FFFFFF1A] w-full h-[56px] rounded-[14px] border-[2px] border-[#FFFFFF33] px-[10px] text-white"
+            />
+          </div>
+          <div>
+            <label
+              class="font-[600] text-[13px] leading-[20px] text-[#FFFFFFE5]"
+              >PHONE NUMBER</label
+            >
+            <br />
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder="+92 300 1234567"
+              class="mt-[12px] bg-[#FFFFFF1A] w-full h-[56px] rounded-[14px] border-[2px] border-[#FFFFFF33] px-[10px] text-white"
+            />
+          </div>
+          <div>
+            <label
+              class="font-[600] text-[13px] leading-[20px] text-[#FFFFFFE5]"
+              >SUBJECT *</label
+            >
+            <br />
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder="Write subject here..."
+              class="mt-[12px] bg-[#FFFFFF1A] w-full h-[56px] rounded-[14px] border-[2px] border-[#FFFFFF33] px-[10px] text-white"
+            />
+          </div>
+          <div class="col-span-2">
+            <label
+              class="font-[600] text-[13px] leading-[20px] text-[#FFFFFFE5]"
+              >MESSAGE *</label
+            >
+            <br />
+            <textarea
+              name=""
+              id=""
+              placeholder=""
+              class="mt-[12px] bg-[#FFFFFF1A] w-full h-[180px] rounded-[14px] border-[2px] border-[#FFFFFF33] px-[10px] py-[16px] text-white"
+            ></textarea>
+          </div>
+          <button
+            class="flex justify-center items-center text-[#FFFFFF] col-span-2 bg-[#53BA83] h-[60px] rounded-[14px] mt-[24px]"
+          >
+            <span>
+              <img
+                src="./Assets/icons/send_icon.png"
+                alt=""
+                class="w-[20px] h-[20px]"
+              />
+            </span>
+            <span> Send Message</span>
+          </button>
+          <!-- <div class="flex justify-center text-center"> -->
+          <p
+            class="mt-[24px] text-[#FFFFFF80] font-[400] text-[13px] leading-[19.5px] col-span-2 text-center"
+          >
+            By submitting this form, you agree to our
+            <span class="text-[#53BA83]"> Privacy Policy </span> and
+            <span class="text-[#53BA83]"> Terms of Service</span>
+          </p>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------Start building your wealth, the right way.-------------- -->
+    <div class="mx-[5vw] mt-[58px]">
+      <div
+        class="w-full h-[484px] rounded-[40px] flex flex-col justify-center items-center"
+        style="background: linear-gradient(180deg, #53ba83 0%, #3fb950 100%)"
+      >
+        <h1
+          class="text-[#FFFFFF] font-[700] text-[52px] leading-[62px] text-center"
+        >
+          Start building your <br />
+          wealth, the right way.
+        </h1>
+        <p
+          class="mt-[20px] font-[500] text-[20px] leading-[30px] text-center text-[#FFFFFFE5]"
+        >
+          Join investors across Pakistan who are growing their money through
+          <br />
+          disciplined, long-term strategies with IEL Trade.
+        </p>
+        <div class="mt-[42px] flex">
+          <button
+            class="flex justify-center items-center bg-[#FFFFFF] w-[276px] py-[18px] rounded-[8px] text-[#53BA83] font-[700] text-[18px] leading-[27px]"
+          >
+            Get Started Free
+            <span
+              ><img
+                src="./Assets/icons//farward_icon.png"
+                alt=""
+                class="w-[20px] h-[20px] mt-1 ml-3"
+            /></span>
+          </button>
+          <button
+            class="w-[195px] border-[2px] border-[#FFFFFF] rounded-[8px] ml-[16px] font-[600] text-[18px] leading-[27px] text-[#FFFFFF]"
+          >
+            Learn More
+          </button>
+        </div>
+        <div
+          class="mt-[24px] font-[400] text-[18px] leading-[21px] text-[#FFFFFFCC]"
+        >
+          No credit card required • Free forever
+        </div>
+      </div>
+    </div>
+    <!-- --------------------Footer---------------------- -->
+    <footer class="bg-[#0B1B0C] py-[60px] px-[7vw] mt-[58px]">
+      <div class="flex justify-between">
+        <div class="w-[30%]">
+          <img
+            src="./Assets//footer_logo.png"
+            alt=""
+            class="w-[157px] h-[47px]"
+          />
+          <p
+            class="font-[400] text-[14px] leading-[22.4px] text-[#FFFFFFB2] mt-[20px]"
+          >
+            Take Control of Your Financial Future. <br />
+            IEL Trade, Where Smart Investing Meets <br />
+            Simple Living.
+          </p>
+        </div>
+        <div class="w-[70%] ml-[240px]">
+          <ul
+            class="text-[#FFFFFF] font-[700] text-[16px] leading-[24px] flex justify-between"
+          >
+            <li>Product</li>
+            <li>Calender</li>
+            <li>Legal</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-[40px]">
+        <p
+          class="font-[400] text-[14px] leading-[19px] text-[#FFFFFF99] py-[22px] border-t border-[#FFFFFF1A]"
+        >
+          Whether you're just starting out or building generational wealth,
+          we're here to help you make moves that matter. Your money has
+          potential. Let's unlock it together. <br />
+          <br />
+
+          <span class="font-[600] text-[16px]">
+            Regulated by SECP | Member of PSX | Your Investments Protected
+          </span>
+        </p>
+      </div>
+
+      <div
+        class="mt-[40px] border-t border-[#FFFFFF1A] py-[20px] flex justify-between"
+      >
+        <p class="font-[400] text-[14px] leading-[21px] text-[#FFFFFF99]">
+          © 2024 IELtrade. All rights reserved.
+        </p>
+        <div class="flex">
+          <img
+            src="./Assets/icons/twiiter.png"
+            alt=""
+            class="w-[20px] h-[20px]"
+          />
+          <img
+            src="./Assets/icons/github.png"
+            alt=""
+            class="w-[20px] h-[20px] ml-[24px]"
+          />
+          <img
+            src="./Assets/icons/linkedin.png"
+            alt=""
+            class="w-[20px] h-[20px] ml-[24px]"
+          />
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleAccordion(clickedButton) {
+        const allTriggers = document.querySelectorAll(
+          "#faq-accordion .accordion-trigger",
+        );
+        const allContents = document.querySelectorAll(
+          "#faq-accordion .accordion-content",
+        );
+        const allIcons = document.querySelectorAll(
+          "#faq-accordion .accordion-icon",
+        );
+
+        const isCurrentlyOpen =
+          !clickedButton.nextElementSibling.classList.contains("hidden");
+
+        // Close all first
+        allTriggers.forEach((trigger, index) => {
+          trigger.classList.remove("text-[#726AFF]"); // remove open styles
+          allContents[index].classList.add("hidden");
+          allIcons[index].classList.remove("rotate-180");
+        });
+
+        // If it wasn't open, open it now
+        if (!isCurrentlyOpen) {
+          clickedButton.classList.add("text-[#726AFF]"); // open style: light purple bg + purple text
+          clickedButton.nextElementSibling.classList.remove("hidden");
+          clickedButton
+            .querySelector(".accordion-icon")
+            .classList.add("rotate-180");
+        }
+        // If it was open, we just closed it above — no need to re-open
+      }
+    </script>
+    <script src="./index.js"></script>
+  </body>
+</html>
