@@ -11,11 +11,12 @@ function populateYears() {
   const select = document.getElementById("investmentYear");
   const currentYear = new Date().getFullYear();
 
-  for (let i = 0; i <= 5; i++) {
+  for (let i = 1; i <= 5; i++) {
     const year = currentYear - i;
     const option = document.createElement("option");
     option.value = year;
     option.textContent = year;
+    option.classList.add("text-[#0B1B0C]");
     select.appendChild(option);
   }
 }
@@ -25,6 +26,7 @@ populateYears();
 // 2. Symbol search with API
 const symbolInput = document.getElementById("symbolInput");
 const dropdown = document.getElementById("symbolDropdown");
+const yearSelect = document.getElementById("investmentYear");
 
 let debounceTimer;
 
@@ -116,6 +118,405 @@ symbolInput.addEventListener("focus", () => {
   }
 });
 
+// 3. When year is selected → fetch API and save to localStorage
+yearSelect.addEventListener("change", function () {
+  const symbol = symbolInput.value.trim();
+  const year = this.value;
 
+  if (!symbol || !year) {
+    // Optional: show a message or do nothing
+    console.log("Please select both symbol and year");
+    return;
+  }
 
+  fetchStockHistory(symbol, year);
+});
 
+async function fetchStockHistory(symbol, selectedYear) {
+  try {
+    const url = `https://ielapis.u2ventures.io/api/psxApi/stock-detail/stock-history-graph/?filter=2Y&stock=${encodeURIComponent(symbol)}`;
+
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error(`API returned ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    // Prepare data to save
+    const storageData = {
+      symbol: symbol,
+      selectedYear: selectedYear,
+      timestamp: new Date().toISOString(),
+      data: data,
+    };
+
+    // Save to localStorage
+    localStorage.setItem(
+      `stock_history_${symbol}`,
+      JSON.stringify(storageData),
+    );
+
+    console.log(`Data for ${symbol} saved to localStorage`, storageData);
+
+    // Optional: you can show success message to user
+    // alert(`Data for ${symbol} loaded and saved!`);
+  } catch (error) {
+    console.error("Error fetching stock history:", error);
+
+    // Optional: show error to user
+    // alert("Failed to load stock data. Please try again.");
+  }
+}
+
+// ====================
+//   CALCULATE ROI & CHART
+// ====================
+
+const calculateBtn = document.getElementById("Calculate_button");
+let roiChartInstance = null;
+
+calculateBtn.addEventListener("click", async () => {
+  const symbol = symbolInput.value.trim();
+  const purchaseYear = yearSelect.value;
+  const shares =
+    parseFloat(document.querySelector('input[type="number"][min="1"]').value) ||
+    0;
+
+  if (!symbol || !purchaseYear || shares <= 0) {
+    alert("Please enter symbol, year and number of shares.");
+    return;
+  }
+
+  // ────────────────────────────────────────────────
+  //   Get history (from cache or API)
+  // ────────────────────────────────────────────────
+  let history = null;
+  let stockData = localStorage.getItem(`stock_history_${symbol}`);
+
+  if (stockData) {
+    const parsed = JSON.parse(stockData);
+    history = parsed.data;
+  }
+
+  if (!history) {
+    try {
+      const url = `https://ielapis.u2ventures.io/api/psxApi/stock-detail/stock-history-graph/?filter=2Y&stock=${encodeURIComponent(symbol)}`;
+      const res = await fetch(url);
+      if (!res.ok) throw new Error("Failed to fetch stock history");
+      const json = await res.json();
+      history = json;
+
+      localStorage.setItem(
+        `stock_history_${symbol}`,
+        JSON.stringify({
+          symbol,
+          timestamp: new Date().toISOString(),
+          data: json,
+        }),
+      );
+    } catch (err) {
+      console.error(err);
+      alert("Could not load stock history. Please try again later.");
+      return;
+    }
+  }
+
+  // ────────────────────────────────────────────────
+  //   Get last closing price of each year
+  // ────────────────────────────────────────────────
+  const yearlyCloses = getYearlyLastDayCloses(history);
+
+  if (!yearlyCloses[purchaseYear]) {
+    alert(`No closing price data found for year ${purchaseYear}`);
+    return;
+  }
+
+  // ★★★ This is the important change ★★★
+  const purchasePricePerShare = yearlyCloses[purchaseYear];
+  const initialInvestment = shares * purchasePricePerShare;
+
+  // ────────────────────────────────────────────────
+  //   Build return series from purchase year onward
+  // ────────────────────────────────────────────────
+  const years = Object.keys(yearlyCloses)
+    .map(Number)
+    .sort((a, b) => a - b);
+
+  const returns = [];
+
+  for (const year of years) {
+    if (year < Number(purchaseYear)) continue;
+
+    const closePrice = yearlyCloses[year];
+    const currentValue = shares * closePrice;
+    const profit = currentValue - initialInvestment;
+    const roiPercent =
+      initialInvestment > 0 ? (currentValue / initialInvestment - 1) * 100 : 0;
+
+    returns.push({
+      year: year.toString(),
+      closePrice,
+      value: currentValue,
+      profit,
+      roiPercent,
+    });
+  }
+
+  if (returns.length === 0) {
+    alert("No data available after the purchase year.");
+    return;
+  }
+
+  // Update total return display
+  const latest = returns[returns.length - 1];
+  document.getElementById("totalReturn").textContent =
+    `PKR ${Math.round(latest.value).toLocaleString()}`;
+
+  // ────────────────────────────────────────────────
+  //   Update chart
+  // ────────────────────────────────────────────────
+  if (roiChartInstance) {
+    roiChartInstance.destroy();
+  }
+
+  const ctx = document.getElementById("roiChart").getContext("2d");
+  roiChartInstance = new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: returns.map((r) => r.year),
+      datasets: [
+        {
+          label: "Portfolio Value",
+          data: returns.map((r) => Math.round(r.value)),
+          backgroundColor: "#B9B5FF",
+          borderColor: "##B9B5FF",
+          borderWidth: 1,
+          borderRadius: 6,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        // title: {
+        //   display: true,
+        //   text: `Portfolio Value (${shares} shares of ${symbol})`,
+        //   color: "#ffffff",
+        //   font: { size: 20 },
+        // },
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: "Value (PKR)",
+            color: "#ffffff88",
+          },
+          ticks: {
+            color: "#ffffff88",
+            callback: (value) => "PKR " + value.toLocaleString(),
+          },
+          grid: { color: "#ffffff11" },
+        },
+        x: {
+          ticks: { color: "#ffffffcc" },
+          grid: { display: false },
+        },
+      },
+    },
+  });
+});
+// const calculateBtn = document.getElementById("Calculate_button");
+// let roiChartInstance = null; // to destroy & recreate chart
+
+// calculateBtn.addEventListener("click", async () => {
+//   const symbol = symbolInput.value.trim();
+//   const purchaseYear = yearSelect.value;
+//   const shares =
+//     parseFloat(document.querySelector('input[type="number"][min="1"]').value) ||
+//     0;
+//   const purchasePrice = 10;
+
+//   if (!symbol || !purchaseYear || shares <= 0 || purchasePrice <= 0) {
+//     alert("Please fill all fields correctly.");
+//     return;
+//   }
+
+//   // Try to get from localStorage first
+//   let stockData = localStorage.getItem(`stock_history_${symbol}`);
+//   let history = null;
+
+//   if (stockData) {
+//     const parsed = JSON.parse(stockData);
+//     history = parsed.data;
+//   }
+
+//   // If not in storage or old → fetch again
+//   if (!history) {
+//     try {
+//       const url = `https://ielapis.u2ventures.io/api/psxApi/stock-detail/stock-history-graph/?filter=2Y&stock=${encodeURIComponent(symbol)}`;
+//       const res = await fetch(url);
+//       if (!res.ok) throw new Error("Failed to fetch");
+//       const json = await res.json();
+//       history = json;
+
+//       // Save again
+//       localStorage.setItem(
+//         `stock_history_${symbol}`,
+//         JSON.stringify({
+//           symbol,
+//           selectedYear: purchaseYear,
+//           timestamp: new Date().toISOString(),
+//           data: json,
+//         }),
+//       );
+//     } catch (err) {
+//       console.error(err);
+//       alert("Could not load stock history. Please try again.");
+//       return;
+//     }
+//   }
+
+//   // Now process the data
+//   const yearlyCloses = getYearlyLastDayCloses(history);
+
+//   // We need at least purchase year + some later years
+//   if (!yearlyCloses[purchaseYear]) {
+//     alert(`No data found for year ${purchaseYear}`);
+//     return;
+//   }
+
+//   const years = Object.keys(yearlyCloses).sort();
+//   const purchasePricePerShare = purchasePrice;
+//   const initialInvestment = shares * purchasePricePerShare;
+
+//   const returns = [];
+//   let cumulativeValue = initialInvestment;
+
+//   years.forEach((year) => {
+//     if (parseInt(year) < parseInt(purchaseYear)) return; // skip years before purchase
+
+//     const closePrice = yearlyCloses[year];
+//     const currentValue = shares * closePrice;
+//     const profit = currentValue - initialInvestment;
+//     const roiPercent = (currentValue / initialInvestment - 1) * 100;
+
+//     returns.push({
+//       year,
+//       closePrice,
+//       value: currentValue,
+//       profit,
+//       roiPercent,
+//     });
+
+//     cumulativeValue = currentValue;
+//   });
+
+//   // Update total return display
+//   const latest = returns[returns.length - 1];
+//   document.getElementById("totalReturn").textContent =
+//     `PKR ${Math.round(latest.value).toLocaleString()}`;
+
+//   // Destroy previous chart if exists
+//   if (roiChartInstance) {
+//     roiChartInstance.destroy();
+//   }
+
+//   const ctx = document.getElementById("roiChart").getContext("2d");
+//   roiChartInstance = new Chart(ctx, {
+//     type: "bar",
+//     data: {
+//       labels: returns.map((r) => r.year),
+//       datasets: [
+//         {
+//           label: "Portfolio Value",
+//           data: returns.map((r) => Math.round(r.value)),
+//           backgroundColor: "#53BA83",
+//           borderColor: "#53BA83",
+//           borderWidth: 1,
+//           borderRadius: 6,
+//         },
+//       ],
+//     },
+//     options: {
+//       responsive: true,
+//       maintainAspectRatio: false,
+//       plugins: {
+//         legend: { display: false },
+//         title: {
+//           display: true,
+//           text: "ROI Chart",
+//           color: "#ffffff",
+//           font: { size: 20 },
+//         },
+//       },
+//       scales: {
+//         y: {
+//           beginAtZero: true,
+//           title: {
+//             display: true,
+//             text: "PKR",
+//             color: "#ffffff88",
+//           },
+//           ticks: {
+//             color: "#ffffff88",
+//             callback: (value) => "PKR " + value.toLocaleString(),
+//           },
+//           grid: { color: "#ffffff11" },
+//         },
+//         x: {
+//           ticks: { color: "#ffffffcc" },
+//           grid: { display: false },
+//         },
+//       },
+//     },
+//   });
+// });
+
+function getYearlyLastDayCloses(historyData) {
+  console.log("History new Data for Usama ", historyData);
+  const closesByYear = {};
+
+  if (Array.isArray(historyData?.data)) {
+    historyData?.data?.forEach((item) => {
+      if (!item.date || !item.close) return;
+      const date = new Date(item.date);
+      const year = date.getFullYear().toString();
+      // Keep the latest price for each year
+      if (!closesByYear[year] || date > new Date(closesByYear[year].date)) {
+        closesByYear[year] = {
+          close: parseFloat(item.close),
+          date: item.date,
+        };
+      }
+    });
+  } else if (historyData?.data) {
+    // or maybe historyData.data is the array
+    historyData.data.forEach((item) => {
+      if (!item.date || !item.close) return;
+      const year = new Date(item.date).getFullYear().toString();
+      if (
+        !closesByYear[year] ||
+        new Date(item.date) > new Date(closesByYear[year].date)
+      ) {
+        closesByYear[year] = {
+          close: parseFloat(item.close),
+          date: item.date,
+        };
+      }
+    });
+  }
+
+  // Convert to simple year → price map
+  const result = {};
+  Object.keys(closesByYear).forEach((year) => {
+    result[year] = closesByYear[year].close;
+  });
+
+  return result;
+}

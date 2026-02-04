@@ -27,11 +27,13 @@
         <div class="flex items-center justify-between">
           <!-- Logo -->
           <div>
-            <img
-              src="./Assets/logo.png"
-              alt="IEL Trade"
-              class="w-[154px] h-[50px] object-contain"
-            />
+            <a href="index.html">
+              <img
+                src="./Assets/logo.png"
+                alt="IEL Trade"
+                class="w-[154px] h-[50px] object-contain"
+              />
+            </a>
           </div>
 
           <!-- Desktop Navigation -->
@@ -39,23 +41,23 @@
             <ul class="flex items-center gap-8 lg:gap-10">
               <li>
                 <a
-                  href="#"
-                  class="text-[#53BA83] font-[600] text-[16px] leading-[21px] hover:text-[#53BA83] transition-colors duration-200"
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
+                  href="howitwork.html"
                   class="text-[#0B1B0C] font-[600] text-[16px] leading-[21px] hover:text-[#53BA83] transition-colors duration-200"
                 >
-                  Learn
+                  How it Work
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
+                  href="whoweare.html"
+                  class="text-[#0B1B0C] font-[600] text-[16px] leading-[21px] hover:text-[#53BA83] transition-colors duration-200"
+                >
+                  Who We Are
+                </a>
+              </li>
+              <li>
+                <a
+                  href="ResearchReport.html"
                   class="text-[#0B1B0C] font-[600] text-[16px] leading-[21px] hover:text-[#53BA83] transition-colors duration-200"
                 >
                   Research Reports
@@ -63,10 +65,10 @@
               </li>
               <li>
                 <a
-                  href="#"
+                  href="Blogs.html"
                   class="text-[#0B1B0C] font-[600] text-[16px] leading-[21px] hover:text-[#53BA83] transition-colors duration-200"
                 >
-                  Contact
+                  Blogs
                 </a>
               </li>
             </ul>
@@ -619,7 +621,7 @@
                 type="text"
                 id="symbolInput"
                 placeholder="Search symbol or company name..."
-                class="bg-[#FFFFFF1A] w-[390px] h-[56px] rounded-[14px] border-[2px] border-[#FFFFFF33] px-[16px] text-white outline-none focus:border-[#53BA83] transition"
+                class="bg-[#FFFFFF1A] w-[390px] h-[56px] rounded-[14px] border-[2px] border-[#FFFFFF33] px-[16px] text-[#FFFFFF] outline-none focus:border-[#53BA83] transition"
                 autocomplete="off"
               />
 
@@ -643,7 +645,7 @@
             <br />
             <select
               id="investmentYear"
-              class="mt-[12px] bg-[#FFFFFF1A] w-[390px] h-[56px] rounded-[14px] border-[2px] border-[#FFFFFF33] px-[16px] text-[#0B1B0C] outline-none focus:border-[#53BA83] transition appearance-none"
+              class="mt-[12px] bg-[#FFFFFF1A] w-[390px] h-[56px] rounded-[14px] border-[2px] border-[#FFFFFF33] px-[16px] text-[#FFFFFF] outline-none focus:border-[#53BA83] transition appearance-none"
             >
               <option value="" disabled selected>Select year</option>
               <!-- Years will be filled by JS -->
@@ -665,28 +667,24 @@
             />
           </div>
 
-          <div class="mt-[32px]">
-            <label
-              class="font-[600] text-[13px] leading-[20px] text-[#FFFFFFE5]"
-            >
-              Price
-            </label>
-            <br />
-            <input
-              type="number"
-              step="0.01"
-              class="mt-[12px] bg-[#FFFFFF1A] w-[390px] h-[56px] rounded-[14px] border-[2px] border-[#FFFFFF33] px-[16px] text-white outline-none focus:border-[#53BA83]"
-              placeholder="Purchase price per share"
-            />
-          </div>
-
           <button
             class="bg-[#53BA83] w-[390px] h-[63px] mt-[137px] rounded-[14px] font-[700] text-[18px] leading-[27px] text-[#FFFFFF] hover:bg-[#44a06e] transition"
+            id="Calculate_button"
           >
             Calculate ROI
           </button>
         </div>
-        <div></div>
+        <div class="w-[70%]">
+          <div class="w-full max-h-[500px] pl-[200px]">
+            <div id="roiValue" class="mb-6">
+              <div class="text-5xl font-bold text-[#53BA83]" id="totalReturn">
+                PKR 0
+              </div>
+            </div>
+
+            <canvas id="roiChart" height="280"></canvas>
+          </div>
+        </div>
       </div>
     </div>
     <!-- --------------------------Questions? We've Got Answers----------------- -->
@@ -1009,9 +1007,9 @@
     </footer>
     <!-- jQuery (required by Slick) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
     <!-- Slick JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
       // slick slider
       // $(document).ready(function () {

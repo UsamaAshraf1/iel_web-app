@@ -1,0 +1,1017 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Research Report</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Slick CSS -->
+  </head>
+
+  <body>
+    <div
+      style="
+        background: linear-gradient(
+          270deg,
+          rgba(164, 255, 204, 1) 0%,
+          rgba(255, 255, 255, 1) 55%
+        );
+      "
+    >
+      <div class="pt-10">
+        <div
+          class="mx-[7vw] bg-white rounded-[24px] shadow-[0_0_12px_0_#9D9D9D59] p-5 md:p-[18px]"
+        >
+         <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <div>
+            <a href="index.html">
+              <img
+                src="./Assets/logo.png"
+                alt="IEL Trade"
+                class="w-[154px] h-[50px] object-contain"
+              />
+            </a>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center space-x-10">
+            <ul class="flex items-center gap-8 lg:gap-10">
+              <li>
+                <a
+                  href="howitwork.html"
+                  class="text-[#0B1B0C] font-[600] text-[16px] leading-[21px] hover:text-[#53BA83] transition-colors duration-200"
+                >
+                  How it Work
+                </a>
+              </li>
+              <li>
+                <a
+                  href="whoweare.html"
+                  class="text-[#0B1B0C] font-[600] text-[16px] leading-[21px] hover:text-[#53BA83] transition-colors duration-200"
+                >
+                  Who We Are
+                </a>
+              </li>
+              <li>
+                <a
+                  href="ResearchReport.html"
+                  class="text-[#53BA83] font-[600] text-[16px] leading-[21px] hover:text-[#53BA83] transition-colors duration-200"
+                >
+                  Research Reports
+                </a>
+              </li>
+              <li>
+                <a
+                  href="Blogs.html"
+                  class="text-[#0B1B0C] font-[600] text-[16px] leading-[21px] hover:text-[#53BA83] transition-colors duration-200"
+                >
+                  Blogs
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Buttons + Mobile Menu Toggle -->
+          <div class="flex items-center gap-4">
+            <!-- Desktop Buttons -->
+            <div class="hidden md:flex items-center gap-4">
+              <button
+                class="px-[19px] py-[10px] bg-[#53BA83] text-[#FFFFFF] font-[600] text-[16px] leading-[21px] rounded-xl hover:bg-[#48a573] transition-all duration-200 shadow-[8px]"
+              >
+                Get Started
+              </button>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button class="md:hidden text-[#0B1B0C] focus:outline-none">
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+          <!-- Mobile Menu (you can toggle visibility with JS) -->
+          <div class="md:hidden mt-5 hidden" id="mobile-menu">
+            <ul class="flex flex-col gap-4">
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-4 text-[#0B1B0C] font-medium hover:bg-gray-50 rounded-lg transition-colors"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-4 text-[#0B1B0C] font-medium hover:bg-gray-50 rounded-lg transition-colors"
+                >
+                  Markets
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-4 text-[#0B1B0C] font-medium hover:bg-gray-50 rounded-lg transition-colors"
+                >
+                  Portfolio
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-4 text-[#0B1B0C] font-medium hover:bg-gray-50 rounded-lg transition-colors"
+                >
+                  Research
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-4 text-[#0B1B0C] font-medium hover:bg-gray-50 rounded-lg transition-colors"
+                >
+                  About
+                </a>
+              </li>
+            </ul>
+
+            <div class="mt-6 flex flex-col gap-4 px-4">
+              <button
+                class="py-3 border-2 border-[#53BA83] text-[#53BA83] font-semibold rounded-xl hover:bg-[#53BA83] hover:text-white transition-all"
+              >
+                Login
+              </button>
+              <button
+                class="py-3 bg-[#53BA83] text-white font-semibold rounded-xl hover:bg-[#48a573] transition-all"
+              >
+                Open Account
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mx-[7vw] mt-[100px] pb-[100px]">
+        <div class="flex justify-center items-center">
+          <div class="text-center">
+            <div class="flex justify-center">
+              <div
+                class="flex justify-center items-center w-[260px] h-[48px] rounded-[40px] bg-[#FFFFFF] border border-[#726AFF33]"
+              >
+                <p class="font-[500] text-[16px] leading-[21px] text-[#726AFF]">
+                  Reports
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h1
+                class="font-[500] text-[72px] leading-[74px] text-[#0B1B0C] mt-[1px5]"
+              >
+                <!-- Because your <span class="text-[#53BA83]"> future </span> <br />
+                deserves more than <br />
+                guesswork. -->
+                Market Knowledge and <br />
+                Insights
+              </h1>
+              <p
+                class="text-[24px] font-[500] leading-[35px] text-[#8A8A8A] mt-[15px] max-w-2xl"
+              >
+                Latest News, Announcements, Research, and Earning Reports
+              </p>
+              <div class="flex justify-center items-center">
+                <div
+                  class="w-[443px] h-[62px] border border-[#D3D3D3] flex justify-between item-center p-[4px] rounded-[8px] mt-[23px]"
+                >
+                  <input
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="Search here"
+                    class="w-full outline-none text-[16px] font-[600] leading-[21px] px-[10px]"
+                  />
+                  <img
+                    src="./Assets/search.png"
+                    alt=""
+                    class="w-[53px] h-[53px]"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ----------------Buttons------- -->
+    <div class="mx-[7vw] mt-[10px]">
+      <div class="flex justify-center items-center">
+        <div
+          class="flex justify-center items-center w-[241px] h-[38px] rounded-[40px] bg-[#FFFFFF] border border-[#726AFF33]"
+        >
+          <img
+            src="./Assets/icons/feature.png"
+            alt=""
+            class="w-[16px] h-[16px]"
+          />
+          <p
+            class="font-[500] text-[13px] leading-[20px] text-[#726AFF] ml-[8px]"
+          >
+            Explore Trending Topics
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-[34px] flex justify-between items-center">
+        <div
+          class="w-[193px] h-[50px] px-[10px] border border-[#53BA83] flex justify-center items-center rounded-full bg-[#53BA8305]"
+        >
+          <img
+            src="./Assets/icons/tech.png"
+            alt=""
+            class="w-[24px] h-[24px] mr-[3px]"
+          />
+          <p class="font-[500] text-[24px] leading-[19.5px] text-[#53BA83]">
+            Technology
+          </p>
+        </div>
+
+        <div
+          class="w-[153px] h-[50px] px-[10px] border border-[#53BA83] flex justify-center items-center rounded-full bg-[#53BA83]"
+        >
+          <img
+            src="./Assets/icons/banking.png"
+            alt=""
+            class="w-[24px] h-[24px] mr-[3px]"
+          />
+          <p class="font-[500] text-[24px] leading-[19.5px] text-[#FFFFFF]">
+            Banking
+          </p>
+        </div>
+
+        <div
+          class="w-[127px] h-[50px] px-[10px] border border-[#53BA83] flex justify-center items-center rounded-full bg-[#53BA8305]"
+        >
+          <img
+            src="./Assets/icons/news.png"
+            alt=""
+            class="w-[24px] h-[24px] mr-[3px]"
+          />
+          <p class="font-[500] text-[24px] leading-[19.5px] text-[#53BA83]">
+            News
+          </p>
+        </div>
+
+        <div
+          class="w-[138px] h-[50px] px-[10px] border border-[#53BA83] flex justify-center items-center rounded-full bg-[#53BA8305]"
+        >
+          <img
+            src="./Assets/icons/sports.png"
+            alt=""
+            class="w-[24px] h-[24px] mr-[3px]"
+          />
+          <p class="font-[500] text-[24px] leading-[19.5px] text-[#53BA83]">
+            Sports
+          </p>
+        </div>
+
+        <div
+          class="w-[163px] h-[50px] px-[10px] border border-[#53BA83] flex justify-center items-center rounded-full bg-[#53BA8305]"
+        >
+          <img
+            src="./Assets/icons/business.png"
+            alt=""
+            class="w-[24px] h-[24px] mr-[3px]"
+          />
+          <p class="font-[500] text-[24px] leading-[19.5px] text-[#53BA83]">
+            Business
+          </p>
+        </div>
+
+        <div
+          class="w-[138px] h-[50px] px-[10px] border border-[#53BA83] flex justify-center items-center rounded-full bg-[#53BA8305]"
+        >
+          <img
+            src="./Assets/icons/sports.png"
+            alt=""
+            class="w-[24px] h-[24px] mr-[3px]"
+          />
+          <p class="font-[500] text-[24px] leading-[19.5px] text-[#53BA83]">
+            Sports
+          </p>
+        </div>
+
+        <div
+          class="w-[163px] h-[50px] px-[10px] border border-[#53BA83] flex justify-center items-center rounded-full bg-[#53BA8305]"
+        >
+          <img
+            src="./Assets/icons/business.png"
+            alt=""
+            class="w-[24px] h-[24px] mr-[3px]"
+          />
+          <p class="font-[500] text-[24px] leading-[19.5px] text-[#53BA83]">
+            Business
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-[34px] flex justify-between items-center">
+        <div
+          class="w-[193px] h-[50px] px-[10px] border border-[#53BA83] flex justify-center items-center rounded-full bg-[#53BA8305]"
+        >
+          <img
+            src="./Assets/icons/tech.png"
+            alt=""
+            class="w-[24px] h-[24px] mr-[3px]"
+          />
+          <p class="font-[500] text-[24px] leading-[19.5px] text-[#53BA83]">
+            Technology
+          </p>
+        </div>
+
+        <div
+          class="w-[153px] h-[50px] px-[10px] border border-[#53BA83] flex justify-center items-center rounded-full bg-[#53BA83]"
+        >
+          <img
+            src="./Assets/icons/banking.png"
+            alt=""
+            class="w-[24px] h-[24px] mr-[3px]"
+          />
+          <p class="font-[500] text-[24px] leading-[19.5px] text-[#FFFFFF]">
+            Banking
+          </p>
+        </div>
+
+        <div
+          class="w-[127px] h-[50px] px-[10px] border border-[#53BA83] flex justify-center items-center rounded-full bg-[#53BA8305]"
+        >
+          <img
+            src="./Assets/icons/news.png"
+            alt=""
+            class="w-[24px] h-[24px] mr-[3px]"
+          />
+          <p class="font-[500] text-[24px] leading-[19.5px] text-[#53BA83]">
+            News
+          </p>
+        </div>
+
+        <div
+          class="w-[138px] h-[50px] px-[10px] border border-[#53BA83] flex justify-center items-center rounded-full bg-[#53BA8305]"
+        >
+          <img
+            src="./Assets/icons/sports.png"
+            alt=""
+            class="w-[24px] h-[24px] mr-[3px]"
+          />
+          <p class="font-[500] text-[24px] leading-[19.5px] text-[#53BA83]">
+            Sports
+          </p>
+        </div>
+
+        <div
+          class="w-[163px] h-[50px] px-[10px] border border-[#53BA83] flex justify-center items-center rounded-full bg-[#53BA8305]"
+        >
+          <img
+            src="./Assets/icons/business.png"
+            alt=""
+            class="w-[24px] h-[24px] mr-[3px]"
+          />
+          <p class="font-[500] text-[24px] leading-[19.5px] text-[#53BA83]">
+            Business
+          </p>
+        </div>
+
+        <div
+          class="w-[138px] h-[50px] px-[10px] border border-[#53BA83] flex justify-center items-center rounded-full bg-[#53BA8305]"
+        >
+          <img
+            src="./Assets/icons/sports.png"
+            alt=""
+            class="w-[24px] h-[24px] mr-[3px]"
+          />
+          <p class="font-[500] text-[24px] leading-[19.5px] text-[#53BA83]">
+            Sports
+          </p>
+        </div>
+
+        <div
+          class="w-[163px] h-[50px] px-[10px] border border-[#53BA83] flex justify-center items-center rounded-full bg-[#53BA8305]"
+        >
+          <img
+            src="./Assets/icons/business.png"
+            alt=""
+            class="w-[24px] h-[24px] mr-[3px]"
+          />
+          <p class="font-[500] text-[24px] leading-[19.5px] text-[#53BA83]">
+            Business
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- -----------------Featured Stocks--------------- -->
+
+    <div class="flex justify-between mx-[7vw] mt-[60px]">
+      <div class="w-[70%]">
+        <div class="grid grid-cols-2 gap-[30px]">
+          <div>
+            <div
+              class="h-[298px] border border-[#D3D3D3] rounded-[18px] bg-[#FFFFFF]"
+            >
+              <div class="flex justify-end items-end pt-[24px] pr-[24px]">
+                <img src="./Assets/logo.png" alt="" class="w-[93px] h-[28px]" />
+              </div>
+              <div class="flex justify-center items-center">
+                <img
+                  src="./Assets/Research_1.png"
+                  alt=""
+                  class="h-[212px] w-[212px]"
+                />
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center mt-[10px]">
+              <div>
+                <h3
+                  class="font-[500] text-[24px] leading-[35px] text-[#0B1B0C]"
+                >
+                  PIA
+                </h3>
+                <p class="font-[500] text-[18px] leading-[35px] text-[#8A8A8A]">
+                  October 15, 2025
+                </p>
+              </div>
+              <img
+                src="./Assets/download.png"
+                alt=""
+                class="w-[53px] h-[53px]"
+              />
+            </div>
+          </div>
+          <div>
+            <div
+              class="h-[298px] border border-[#D3D3D3] rounded-[18px] bg-[#FFFFFF]"
+            >
+              <div class="flex justify-end items-end pt-[24px] pr-[24px]">
+                <img src="./Assets/logo.png" alt="" class="w-[93px] h-[28px]" />
+              </div>
+              <div class="flex justify-center items-center">
+                <img
+                  src="./Assets/Research_2.png"
+                  alt=""
+                  class="h-[212px] w-[212px]"
+                />
+              </div>
+            </div>
+            <div class="flex justify-between items-center mt-[10px]">
+              <div>
+                <h3
+                  class="font-[500] text-[24px] leading-[35px] text-[#0B1B0C]"
+                >
+                  KEL
+                </h3>
+                <p class="font-[500] text-[18px] leading-[35px] text-[#8A8A8A]">
+                  October 15, 2025
+                </p>
+              </div>
+              <img
+                src="./Assets/download.png"
+                alt=""
+                class="w-[53px] h-[53px]"
+              />
+            </div>
+          </div>
+
+          <div>
+            <div
+              class="h-[298px] border border-[#D3D3D3] rounded-[18px] bg-[#FFFFFF]"
+            >
+              <div class="flex justify-end items-end pt-[24px] pr-[24px]">
+                <img src="./Assets/logo.png" alt="" class="w-[93px] h-[28px]" />
+              </div>
+              <div class="flex justify-center items-center">
+                <img
+                  src="./Assets/Research_3.png"
+                  alt=""
+                  class="h-[212px] w-[212px]"
+                />
+              </div>
+            </div>
+            <div class="flex justify-between items-center mt-[10px]">
+              <div>
+                <h3
+                  class="font-[500] text-[24px] leading-[35px] text-[#0B1B0C]"
+                >
+                  MCB
+                </h3>
+                <p class="font-[500] text-[18px] leading-[35px] text-[#8A8A8A]">
+                  October 15, 2025
+                </p>
+              </div>
+              <img
+                src="./Assets/download.png"
+                alt=""
+                class="w-[53px] h-[53px]"
+              />
+            </div>
+          </div>
+
+          <div>
+            <div
+              class="h-[298px] border border-[#D3D3D3] rounded-[18px] bg-[#FFFFFF]"
+            >
+              <div class="flex justify-end items-end pt-[24px] pr-[24px]">
+                <img src="./Assets/logo.png" alt="" class="w-[93px] h-[28px]" />
+              </div>
+              <div class="flex justify-center items-center">
+                <img
+                  src="./Assets/Research_4.png"
+                  alt=""
+                  class="h-[212px] w-[212px]"
+                />
+              </div>
+            </div>
+            <div class="flex justify-between items-center mt-[10px]">
+              <div>
+                <h3
+                  class="font-[500] text-[24px] leading-[35px] text-[#0B1B0C]"
+                >
+                  NBP
+                </h3>
+                <p class="font-[500] text-[18px] leading-[35px] text-[#8A8A8A]">
+                  October 15, 2025
+                </p>
+              </div>
+              <img
+                src="./Assets/download.png"
+                alt=""
+                class="w-[53px] h-[53px]"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-[30%]">
+        <div class="flex justify-end">
+          <div
+            class="border border-[#D3D3D3] w-[335px] rounded-[18px] p-[18px] h-[600px]"
+          >
+            <h3 class="font-[500] text-[24px] leading-[35px] text-[#8A8A8A]">
+              Featured Stocks
+            </h3>
+
+            <div
+              class="flex justify-between items-center mt-[12px] px-[12px] py-[18px] border-b-[0.56px] border-[#F0F0F0]"
+            >
+              <div class="flex items-center">
+                <img
+                  src="./Assets/trending_1.png"
+                  alt=""
+                  class="w-[52px] h-[52px]"
+                />
+                <p
+                  class="ml-[14px] font-[600] text-[16px] leading-[24px] text-[#0B1B0C]"
+                >
+                  KEL
+                </p>
+              </div>
+              <div class="flex flex-col justify-end items-end">
+                <p class="font-[600] text-[16px] leading-[24px] text-[#0B1B0C]">
+                  PKR 171,725.00
+                </p>
+                <div
+                  class="flex justify-center items-center font-[600] text-[12px] leading-[18px] text-[#3FB950] mt-[8px] bg-[#3FB9501A] px-[8px] py-[3px] rounded-[6px]"
+                >
+                  <img
+                    src="./Assets/icons/increment_icon.png"
+                    alt=""
+                    class="w-[7px] h-[6px] mr-[4px]"
+                  />
+                  +14.48%
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="flex justify-between items-center mt-[12px] px-[12px] py-[18px] border-b-[0.56px] border-[#F0F0F0]"
+            >
+              <div class="flex items-center">
+                <img
+                  src="./Assets/trending_1.png"
+                  alt=""
+                  class="w-[52px] h-[52px]"
+                />
+                <p
+                  class="ml-[14px] font-[600] text-[16px] leading-[24px] text-[#0B1B0C]"
+                >
+                  KEL
+                </p>
+              </div>
+              <div class="flex flex-col justify-end items-end">
+                <p class="font-[600] text-[16px] leading-[24px] text-[#0B1B0C]">
+                  PKR 171,725.00
+                </p>
+                <div
+                  class="flex justify-center items-center font-[600] text-[12px] leading-[18px] text-[#3FB950] mt-[8px] bg-[#3FB9501A] px-[8px] py-[3px] rounded-[6px]"
+                >
+                  <img
+                    src="./Assets/icons/increment_icon.png"
+                    alt=""
+                    class="w-[7px] h-[6px] mr-[4px]"
+                  />
+                  +14.48%
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="flex justify-between items-center mt-[12px] px-[12px] py-[18px] border-b-[0.56px] border-[#F0F0F0]"
+            >
+              <div class="flex items-center">
+                <img
+                  src="./Assets/trending_1.png"
+                  alt=""
+                  class="w-[52px] h-[52px]"
+                />
+                <p
+                  class="ml-[14px] font-[600] text-[16px] leading-[24px] text-[#0B1B0C]"
+                >
+                  KEL
+                </p>
+              </div>
+              <div class="flex flex-col justify-end items-end">
+                <p class="font-[600] text-[16px] leading-[24px] text-[#0B1B0C]">
+                  PKR 171,725.00
+                </p>
+                <div
+                  class="flex justify-center items-center font-[600] text-[12px] leading-[18px] text-[#E00000] mt-[8px] bg-[#E000001A] px-[8px] py-[3px] rounded-[6px]"
+                >
+                  <img
+                    src="./Assets/icons/decrement_icon.png"
+                    alt=""
+                    class="w-[7px] h-[6px] mr-[4px]"
+                  />
+                  +14.48%
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="flex justify-between items-center mt-[12px] px-[12px] py-[18px] border-b-[0.56px] border-[#F0F0F0]"
+            >
+              <div class="flex items-center">
+                <img
+                  src="./Assets/trending_1.png"
+                  alt=""
+                  class="w-[52px] h-[52px]"
+                />
+                <p
+                  class="ml-[14px] font-[600] text-[16px] leading-[24px] text-[#0B1B0C]"
+                >
+                  KEL
+                </p>
+              </div>
+              <div class="flex flex-col justify-end items-end">
+                <p class="font-[600] text-[16px] leading-[24px] text-[#0B1B0C]">
+                  PKR 171,725.00
+                </p>
+                <div
+                  class="flex justify-center items-center font-[600] text-[12px] leading-[18px] text-[#3FB950] mt-[8px] bg-[#3FB9501A] px-[8px] py-[3px] rounded-[6px]"
+                >
+                  <img
+                    src="./Assets/icons/increment_icon.png"
+                    alt=""
+                    class="w-[7px] h-[6px] mr-[4px]"
+                  />
+                  +14.48%
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="flex justify-between items-center mt-[12px] px-[12px] py-[18px]"
+            >
+              <div class="flex items-center">
+                <img
+                  src="./Assets/trending_1.png"
+                  alt=""
+                  class="w-[52px] h-[52px]"
+                />
+                <p
+                  class="ml-[14px] font-[600] text-[16px] leading-[24px] text-[#0B1B0C]"
+                >
+                  KEL
+                </p>
+              </div>
+              <div class="flex flex-col justify-end items-end">
+                <p class="font-[600] text-[16px] leading-[24px] text-[#0B1B0C]">
+                  PKR 171,725.00
+                </p>
+                <div
+                  class="flex justify-center items-center font-[600] text-[12px] leading-[18px] text-[#3FB950] mt-[8px] bg-[#3FB9501A] px-[8px] py-[3px] rounded-[6px]"
+                >
+                  <img
+                    src="./Assets/icons/increment_icon.png"
+                    alt=""
+                    class="w-[7px] h-[6px] mr-[4px]"
+                  />
+                  +14.48%
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-end mt-[28px]">
+          <div
+            class="border border-[#D3D3D3] w-[335px] rounded-[18px] p-[18px] h-[600px]"
+          >
+            <h3 class="font-[500] text-[24px] leading-[35px] text-[#8A8A8A]">
+              Trending Reports
+            </h3>
+            <div
+              class="flex justify-between items-center mt-[12px] px-[12px] py-[18px] border-b-[0.56px] border-[#F0F0F0]"
+            >
+              <div class="flex items-center">
+                <img
+                  src="./Assets/trending_1.png"
+                  alt=""
+                  class="w-[52px] h-[52px]"
+                />
+                <p
+                  class="ml-[14px] font-[600] text-[16px] leading-[24px] text-[#0B1B0C]"
+                >
+                  KEL
+                </p>
+              </div>
+              <img
+                src="./Assets/new_download.png"
+                alt=""
+                class="w-[52px] h-[52px]"
+              />
+            </div>
+            <div
+              class="flex justify-between items-center mt-[12px] px-[12px] py-[18px] border-b-[0.56px] border-[#F0F0F0]"
+            >
+              <div class="flex items-center">
+                <img
+                  src="./Assets/trending_1.png"
+                  alt=""
+                  class="w-[52px] h-[52px]"
+                />
+                <p
+                  class="ml-[14px] font-[600] text-[16px] leading-[24px] text-[#0B1B0C]"
+                >
+                  KEL
+                </p>
+              </div>
+              <img
+                src="./Assets/new_download.png"
+                alt=""
+                class="w-[52px] h-[52px]"
+              />
+            </div>
+            <div
+              class="flex justify-between items-center mt-[12px] px-[12px] py-[18px] border-b-[0.56px] border-[#F0F0F0]"
+            >
+              <div class="flex items-center">
+                <img
+                  src="./Assets/trending_1.png"
+                  alt=""
+                  class="w-[52px] h-[52px]"
+                />
+                <p
+                  class="ml-[14px] font-[600] text-[16px] leading-[24px] text-[#0B1B0C]"
+                >
+                  KEL
+                </p>
+              </div>
+              <img
+                src="./Assets/new_download.png"
+                alt=""
+                class="w-[52px] h-[52px]"
+              />
+            </div>
+            <div
+              class="flex justify-between items-center mt-[12px] px-[12px] py-[18px] border-b-[0.56px] border-[#F0F0F0]"
+            >
+              <div class="flex items-center">
+                <img
+                  src="./Assets/trending_1.png"
+                  alt=""
+                  class="w-[52px] h-[52px]"
+                />
+                <p
+                  class="ml-[14px] font-[600] text-[16px] leading-[24px] text-[#0B1B0C]"
+                >
+                  KEL
+                </p>
+              </div>
+              <img
+                src="./Assets/new_download.png"
+                alt=""
+                class="w-[52px] h-[52px]"
+              />
+            </div>
+            <div
+              class="flex justify-between items-center mt-[12px] px-[12px] py-[18px]"
+            >
+              <div class="flex items-center">
+                <img
+                  src="./Assets/trending_1.png"
+                  alt=""
+                  class="w-[52px] h-[52px]"
+                />
+                <p
+                  class="ml-[14px] font-[600] text-[16px] leading-[24px] text-[#0B1B0C]"
+                >
+                  KEL
+                </p>
+              </div>
+              <img
+                src="./Assets/new_download.png"
+                alt=""
+                class="w-[52px] h-[52px]"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -------------Have Questions?-------------- -->
+    <div class="mx-[5vw] mt-[58px]">
+      <div
+        class="w-full h-[380px] rounded-[40px] flex flex-col justify-center items-center"
+        style="background: linear-gradient(180deg, #53ba83 0%, #3fb950 100%)"
+      >
+        <h1
+          class="text-[#FFFFFF] font-[700] text-[52px] leading-[62px] text-center"
+        >
+          Have Questions?
+        </h1>
+        <p
+          class="mt-[20px] font-[500] text-[20px] leading-[30px] text-center text-[#FFFFFFE5]"
+        >
+          We're here to help you get started confidently.
+        </p>
+        <div class="mt-[30px] grid grid-cols-1 md:grid-cols-3 gap-[30px]">
+          <div class="flex items-center">
+            <img
+              src="./Assets/icons/contact_icon.png"
+              alt=""
+              class="w-[55px] h-[55px]"
+            />
+            <p
+              class="font-[400] text-[20px] leading-[22px] text-[#FFFFFF] ml-[16px]"
+            >
+              +92 (42) 3574-1714
+            </p>
+          </div>
+
+          <div class="flex items-center">
+            <img
+              src="./Assets/icons/email_icon.png"
+              alt=""
+              class="w-[55px] h-[55px]"
+            />
+            <p
+              class="font-[400] text-[20px] leading-[22px] text-[#FFFFFF] ml-[16px]"
+            >
+              info@ieltrade.com
+            </p>
+          </div>
+          <div class="flex items-center">
+            <img
+              src="./Assets/icons/location_icon.png"
+              alt=""
+              class="w-[55px] h-[55px]"
+            />
+            <p
+              class="font-[400] text-[20px] leading-[22px] text-[#FFFFFF] ml-[16px]"
+            >
+              Lahore or Karachi offices <br />
+              (appointments welcome)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- --------------------Footer---------------------- -->
+    <footer class="bg-[#0B1B0C] py-[60px] px-[7vw] mt-[58px]">
+      <div class="flex justify-between">
+        <div class="w-[30%]">
+          <img
+            src="./Assets//footer_logo.png"
+            alt=""
+            class="w-[157px] h-[47px]"
+          />
+          <p
+            class="font-[400] text-[14px] leading-[22.4px] text-[#FFFFFFB2] mt-[20px]"
+          >
+            Take Control of Your Financial Future. <br />
+            IEL Trade, Where Smart Investing Meets <br />
+            Simple Living.
+          </p>
+        </div>
+        <div class="w-[70%] ml-[240px]">
+          <ul
+            class="text-[#FFFFFF] font-[700] text-[16px] leading-[24px] flex justify-between"
+          >
+            <li>Product</li>
+            <li>Calender</li>
+            <li>Legal</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-[40px]">
+        <p
+          class="font-[400] text-[14px] leading-[19px] text-[#FFFFFF99] py-[22px] border-t border-[#FFFFFF1A]"
+        >
+          Whether you're just starting out or building generational wealth,
+          we're here to help you make moves that matter. Your money has
+          potential. Let's unlock it together. <br />
+          <br />
+
+          <span class="font-[600] text-[16px]">
+            Regulated by SECP | Member of PSX | Your Investments Protected
+          </span>
+        </p>
+      </div>
+
+      <div
+        class="mt-[40px] border-t border-[#FFFFFF1A] py-[20px] flex justify-between"
+      >
+        <p class="font-[400] text-[14px] leading-[21px] text-[#FFFFFF99]">
+          © 2024 IELtrade. All rights reserved.
+        </p>
+        <div class="flex">
+          <img
+            src="./Assets/icons/twiiter.png"
+            alt=""
+            class="w-[20px] h-[20px]"
+          />
+          <img
+            src="./Assets/icons/github.png"
+            alt=""
+            class="w-[20px] h-[20px] ml-[24px]"
+          />
+          <img
+            src="./Assets/icons/linkedin.png"
+            alt=""
+            class="w-[20px] h-[20px] ml-[24px]"
+          />
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleAccordion(clickedButton) {
+        const allTriggers = document.querySelectorAll(
+          "#faq-accordion .accordion-trigger",
+        );
+        const allContents = document.querySelectorAll(
+          "#faq-accordion .accordion-content",
+        );
+        const allIcons = document.querySelectorAll(
+          "#faq-accordion .accordion-icon",
+        );
+
+        const isCurrentlyOpen =
+          !clickedButton.nextElementSibling.classList.contains("hidden");
+
+        // Close all first
+        allTriggers.forEach((trigger, index) => {
+          trigger.classList.remove("text-[#726AFF]"); // remove open styles
+          allContents[index].classList.add("hidden");
+          allIcons[index].classList.remove("rotate-180");
+        });
+
+        // If it wasn't open, open it now
+        if (!isCurrentlyOpen) {
+          clickedButton.classList.add("text-[#726AFF]"); // open style: light purple bg + purple text
+          clickedButton.nextElementSibling.classList.remove("hidden");
+          clickedButton
+            .querySelector(".accordion-icon")
+            .classList.add("rotate-180");
+        }
+        // If it was open, we just closed it above — no need to re-open
+      }
+    </script>
+    <script src="./index.js"></script>
+  </body>
+</html>
