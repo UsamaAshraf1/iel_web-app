@@ -1,10 +1,23 @@
 @font-face {
   font-family: "SF Pro Display";
   src: url("./Assets/fonts/SFPRODISPLAYREGULAR.OTF");
-  /* font-weight: 500;
-  font-style: normal;
-  font-display: swap;  */
 }
 body {
   font-family: "SF Pro Display";
+}
+
+.accordion-content {
+  transition:
+    max-height 0.5s ease-in-out,
+    padding 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.accordion-content[style*="max-height: 0px"] {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.accordion-icon {
+  transition: transform 0.4s ease;
 }
