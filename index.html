@@ -182,7 +182,7 @@
 
                 <div>
                   <h1
-                    class="font-[500] text-[36px] md:text-[72px] leading-[40px] md:leading-[74px] text-[#0B1B0C] mt-[1px5]"
+                    class="font-[500] text-[36px] md:text-[72px] leading-[40px] md:leading-[74px] text-[#0B1B0C] mt-[15px]"
                   >
                     Because your <span class="text-[#53BA83]"> future </span>
                     <br />
@@ -759,50 +759,63 @@
       </p>
 
       <div class="mt-[48px] max-w-4xl mx-auto space-y-5" id="faq-accordion">
-        <!-- FAQ 1 -->
-        <!-- <div
-          class="border-[2px] border-[#E5E7EB] rounded-[20px] overflow-hidden bg-white transition-all duration-300 shadow-md"
+        <!-- Example for one FAQ item -->
+        <div
+          class="accordiandiv border-[2px] border-[#E5E7EB] rounded-[20px] overflow-hidden bg-white shadow-md transition-colors duration-300"
         >
           <div
-            onclick="toggleAccordion(this)"
-            class="accordion-trigger transition-all duration-300 w-full px-6 py-5"
+            class="accordion-trigger transition-all duration-300 w-full px-6 py-5 cursor-pointer"
           >
             <button
-              class="bg-[#F0F0F0] px-[12px] py-[4px] rounded-full text-[#8A8A8A] font-[600] text-[12px] leading-[18px]"
+              class="category-btn bg-[#F0F0F0] px-[12px] py-[4px] rounded-full text-[#8A8A8A] font-[600] text-[12px] leading-[18px] transition-colors duration-300 border-none border-[#726AFF]"
             >
               Getting Started
             </button>
-            <button
-              class="flex justify-between items-center text-left w-full font-[700] text-[20px] text-[#0B1B0C] leading-[30px]"
-            >
-              How much money do I need to start investing?
-              <svg
-                class="w-6 h-6 text-[#726AFF] transition-transform duration-300 accordion-icon"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-          </div>
-          <div
-            class="hidden px-6 pb-6 text-[#5A5A5A] font-[400] text-[16px] leading-[27.2px] accordion-content"
-          >
-            You can start with as little as Rs 5,000. That's less than most
-            people spend on monthly dining out. The important thing isn't how
-            much you start with—it's that you start.
-          </div>
-        </div> -->
 
-        <!-- Example for one FAQ item -->
-        <div
-          class="border-[2px] border-[#E5E7EB] rounded-[20px] overflow-hidden bg-white shadow-md"
+            <div
+              class="flex justify-between items-center text-left w-full mt-3"
+            >
+              <span
+                class="title-text font-[700] text-[20px] text-[#0B1B0C] leading-[30px] transition-colors duration-300"
+              >
+                How much money do I need to start investing?
+              </span>
+
+              <div
+                class="w-[40px] h-[40px] flex items-center justify-center text-[#726AFF] text-2xl font-bold transition-transform duration-300 accordion-icon"
+              >
+                <span class="plus-sign">
+                  <img
+                    src="./Assets/icons/plus_btn.png"
+                    alt=""
+                    class="w-[40px] h-[40px]"
+                  />
+                </span>
+                <span class="minus-sign hidden">
+                  <img
+                    src="./Assets/icons/minus_btn.png"
+                    alt=""
+                    class="w-[40px] h-[40px]"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out"
+          >
+            <div
+              class="px-6 pb-6 pt-1 text-[#5A5A5A] font-[400] text-[16px] leading-[27.2px]"
+            >
+              You can start with as little as Rs 5,000. That's less than most
+              people spend on monthly dining out. The important thing isn't how
+              much you start with—it's that you start.
+            </div>
+          </div>
+        </div>
+        <!-- <div
+          class="accordiandiv border-[2px] border-[#E5E7EB] rounded-[20px] overflow-hidden bg-white shadow-md"
         >
           <div
             class="accordion-trigger transition-all duration-300 w-full px-6 py-5 cursor-pointer"
@@ -820,23 +833,81 @@
               >
                 How much money do I need to start investing?
               </span>
-              <svg
-                class="w-6 h-6 text-[#726AFF] transition-transform duration-400 accordion-icon"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+
+              <div
+                class="w-[40px] h-[40px] flex items-center justify-center text-[#726AFF] text-2xl font-bold transition-transform duration-300 accordion-icon"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
+                <span class="plus-sign"
+                  ><img
+                    src="./Assets/icons/plus_btn.png"
+                    alt=""
+                    class="w-[40px] h-[40px]"
+                /></span>
+                <span class="minus-sign hidden"
+                  ><img
+                    src="./Assets/icons/minus_btn.png"
+                    alt=""
+                    class="w-[40px] h-[40px]"
+                /></span>
+              </div>
             </div>
           </div>
 
-          <!-- This is the part that will smoothly expand/collapse -->
+          <div
+            class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out"
+          >
+            <div
+              class="px-6 pb-6 pt-1 text-[#5A5A5A] font-[400] text-[16px] leading-[27.2px]"
+            >
+              You can start with as little as Rs 5,000. That's less than most
+              people spend on monthly dining out. The important thing isn't how
+              much you start with—it's that you start.
+            </div>
+          </div>
+        </div> -->
+
+        <div
+          class="accordiandiv border-[2px] border-[#E5E7EB] rounded-[20px] overflow-hidden bg-white shadow-md transition-colors duration-300"
+        >
+          <div
+            class="accordion-trigger transition-all duration-300 w-full px-6 py-5 cursor-pointer"
+          >
+            <button
+              class="category-btn bg-[#F0F0F0] px-[12px] py-[4px] rounded-full text-[#8A8A8A] font-[600] text-[12px] leading-[18px] transition-colors duration-300 border-none border-[#726AFF]"
+            >
+              Security
+            </button>
+
+            <div
+              class="flex justify-between items-center text-left w-full mt-3"
+            >
+              <span
+                class="title-text font-[700] text-[20px] text-[#0B1B0C] leading-[30px] transition-colors duration-300"
+              >
+                Is my money safe with IEL Trade?
+              </span>
+
+              <div
+                class="w-[40px] h-[40px] flex items-center justify-center text-[#726AFF] text-2xl font-bold transition-transform duration-300 accordion-icon"
+              >
+                <span class="plus-sign">
+                  <img
+                    src="./Assets/icons/plus_btn.png"
+                    alt=""
+                    class="w-[40px] h-[40px]"
+                  />
+                </span>
+                <span class="minus-sign hidden">
+                  <img
+                    src="./Assets/icons/minus_btn.png"
+                    alt=""
+                    class="w-[40px] h-[40px]"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+
           <div
             class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out"
           >
@@ -1225,37 +1296,197 @@
         adaptiveHeight: false,
         infinite: true,
       });
-      // Accordians
+
+      // // Accordion functionality
+      // function toggleAccordion(trigger) {
+      //   const content = trigger.nextElementSibling;
+      //   if (!content || !content.classList.contains("accordion-content")) {
+      //     return; // safety check
+      //   }
+
+      //   const iconContainer = trigger.querySelector(".accordion-icon");
+      //   if (!iconContainer) return;
+
+      //   const plusSign = iconContainer.querySelector(".plus-sign");
+      //   const minusSign = iconContainer.querySelector(".minus-sign");
+
+      //   // Check current state
+      //   const isCurrentlyOpen =
+      //     content.style.maxHeight && content.style.maxHeight !== "0px";
+
+      //   // Close all other accordions (optional - remove this block if you want independent toggling)
+      //   document.querySelectorAll(".accordion-content").forEach((panel) => {
+      //     if (panel !== content) {
+      //       panel.style.maxHeight = "0px";
+      //       const otherIcon =
+      //         panel.parentElement.querySelector(".accordion-icon");
+      //       if (otherIcon) {
+      //         otherIcon.querySelector(".plus-sign")?.classList.remove("hidden");
+      //         otherIcon.querySelector(".minus-sign")?.classList.add("hidden");
+      //         otherIcon.classList.remove("rotate-180");
+      //       }
+      //     }
+      //   });
+
+      //   const mainDiv = trigger.closest(".accordiandiv");
+      //   // Toggle current accordion
+      //   if (isCurrentlyOpen) {
+      //     // Close
+      //     content.style.maxHeight = "0px";
+      //     if (plusSign) plusSign.classList.remove("hidden");
+      //     if (minusSign) minusSign.classList.add("hidden");
+      //     iconContainer.classList.remove("rotate-180");
+      //     Maindiv.classList.add("border-[#53BA83]");
+      //     Maindiv.classList.remove("border-[#53BA83]");
+      //   } else {
+      //     // Open
+      //     content.style.maxHeight = content.scrollHeight + 60 + "px"; // extra buffer
+      //     if (plusSign) plusSign.classList.add("hidden");
+      //     if (minusSign) minusSign.classList.remove("hidden");
+      //     iconContainer.classList.add("rotate-180");
+      //     Maindiv.classList.remove("border-[#53BA83]");
+      //     Maindiv.classList.add("border-[#53BA83]");
+      //   }
+      // }
+
+      // // Initialize all accordions
+      // document.addEventListener("DOMContentLoaded", () => {
+      //   const triggers = document.querySelectorAll(".accordion-trigger");
+
+      //   triggers.forEach((trigger) => {
+      //     trigger.addEventListener("click", () => {
+      //       toggleAccordion(trigger);
+      //     });
+
+      //     // Optional: make it keyboard accessible
+      //     trigger.addEventListener("keydown", (e) => {
+      //       if (e.key === "Enter" || e.key === " ") {
+      //         e.preventDefault();
+      //         toggleAccordion(trigger);
+      //       }
+      //     });
+      //   });
+      // });
+
       function toggleAccordion(trigger) {
         const content = trigger.nextElementSibling;
-        const icon = trigger.querySelector(".accordion-icon");
+        if (!content || !content.classList.contains("accordion-content"))
+          return;
 
-        // Check if currently open
-        const isOpen =
+        const iconContainer = trigger.querySelector(".accordion-icon");
+        if (!iconContainer) return;
+
+        const plusSign = iconContainer.querySelector(".plus-sign");
+        const minusSign = iconContainer.querySelector(".minus-sign");
+
+        // Get main container
+        const mainDiv = trigger.closest(".accordiandiv");
+        if (!mainDiv) return;
+
+        // Get elements to style
+        const categoryBtn = trigger.querySelector(".category-btn");
+        const titleText = trigger.querySelector(".title-text");
+
+        // Check current state
+        const isCurrentlyOpen =
           content.style.maxHeight && content.style.maxHeight !== "0px";
 
-        // Close all other accordions first (optional but recommended)
-        document.querySelectorAll(".accordion-content").forEach((item) => {
-          if (item !== content) {
-            item.style.maxHeight = "0px";
-            item.parentElement
-              .querySelector(".accordion-icon")
-              ?.classList.remove("rotate-180");
+        // Close all other accordions
+        document.querySelectorAll(".accordion-content").forEach((panel) => {
+          if (panel !== content) {
+            panel.style.maxHeight = "0px";
+
+            const otherTrigger = panel.previousElementSibling;
+            if (otherTrigger) {
+              const otherIcon = otherTrigger.querySelector(".accordion-icon");
+              if (otherIcon) {
+                otherIcon
+                  .querySelector(".plus-sign")
+                  ?.classList.remove("hidden");
+                otherIcon.querySelector(".minus-sign")?.classList.add("hidden");
+                otherIcon.classList.remove("rotate-180");
+              }
+
+              // Reset styles for closed accordions
+              const otherMain = otherTrigger.closest(".accordiandiv");
+              if (otherMain) {
+                otherMain.classList.remove("border-[#53BA83]");
+                otherMain.classList.add("border-[#E5E7EB]");
+              }
+
+              otherTrigger
+                .querySelector(".category-btn")
+                ?.classList.remove("text-[#53BA83]");
+              // otherTrigger
+              //   .querySelector(".category-btn")
+              //   ?.classList.add("text-[#8A8A8A]");
+              otherTrigger
+                .querySelector(".title-text")
+                ?.classList.remove("text-[#53BA83]");
+              // otherTrigger
+              //   .querySelector(".title-text")
+              //   ?.classList.add("text-[#0B1B0C]");
+            }
           }
         });
 
-        // Toggle current one
-        if (isOpen) {
+        // Toggle current accordion
+        if (isCurrentlyOpen) {
+          // Close
           content.style.maxHeight = "0px";
-          icon.classList.remove("rotate-180");
+          if (plusSign) plusSign.classList.remove("hidden");
+          if (minusSign) minusSign.classList.add("hidden");
+          iconContainer.classList.remove("rotate-180");
+
+          // Reset styles
+          mainDiv.classList.remove("border-[#53BA83]");
+          mainDiv.classList.add("border-[#E5E7EB]");
+
+          if (categoryBtn) {
+            categoryBtn.classList.remove("text-[#726AFF]");
+            categoryBtn.classList.add("text-[#8A8A8A]");
+
+            categoryBtn.classList.add("bg-[#F0F0F0]");
+            categoryBtn.classList.remove("bg-[#FFFFF]");
+
+            categoryBtn.classList.add("border-none");
+            categoryBtn.classList.remove("border-[1px] border-[#726AFF]");
+          }
+
+          if (titleText) {
+            titleText.classList.remove("text-[#53BA83]");
+            titleText.classList.add("text-[#0B1B0C]");
+          }
         } else {
-          // Set max-height to scrollHeight + some buffer
-          content.style.maxHeight = content.scrollHeight + 40 + "px"; // 40px buffer for safety
-          icon.classList.add("rotate-180");
+          // Open
+          content.style.maxHeight = content.scrollHeight + 60 + "px";
+          if (plusSign) plusSign.classList.add("hidden");
+          if (minusSign) minusSign.classList.remove("hidden");
+          iconContainer.classList.add("rotate-180");
+
+          // Apply active styles
+          mainDiv.classList.remove("border-[#E5E7EB]");
+          mainDiv.classList.add("border-[#53BA83]");
+
+          if (categoryBtn) {
+            categoryBtn.classList.remove("text-[#8A8A8A]");
+            categoryBtn.classList.add("text-[#726AFF]");
+
+            categoryBtn.classList.remove("bg-[#F0F0F0]");
+            categoryBtn.classList.add("bg-[#FFFFF]");
+
+            categoryBtn.classList.remove("border-none");
+            categoryBtn.classList.add("border-[1px]");
+          }
+
+          if (titleText) {
+            titleText.classList.remove("text-[#0B1B0C]");
+            titleText.classList.add("text-[#53BA83]");
+          }
         }
       }
 
-      // Attach to all triggers
+      // Attach event listeners
       document.querySelectorAll(".accordion-trigger").forEach((trigger) => {
         trigger.addEventListener("click", () => toggleAccordion(trigger));
       });
