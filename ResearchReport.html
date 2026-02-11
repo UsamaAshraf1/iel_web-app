@@ -21,9 +21,9 @@
         );
       "
     >
-      <div class="pt-10">
+      <div class="md:pt-10">
         <div
-          class="mx-[7vw] bg-white rounded-[24px] shadow-[0_0_12px_0_#9D9D9D59] p-5 md:p-[18px]"
+          class="md:mx-[7vw] bg-white md:rounded-[24px] shadow-[0_0_12px_0_#9D9D9D59] p-5 md:p-[18px]"
         >
           <div class="flex items-center justify-between">
             <!-- Logo -->
@@ -152,7 +152,7 @@
           </div>
         </div>
       </div>
-      <div class="mx-[7vw] mt-[50px] md:mt-[100px] pb-[100px]">
+      <div class="mx-[7vw] mt-[24px] md:mt-[100px] pb-[50px] md:pb-[100px]">
         <div class="flex justify-center items-center">
           <div class="text-center">
             <div class="flex justify-center">
@@ -317,23 +317,16 @@
 
     <div class="mx-[7vw] mt-[20px] block md:hidden">
       <div class="flex">
-        <div
-          class="flex items-center w-[241px] h-[38px] rounded-[40px]"
-        >
-          <img
-            src="./Assets/icons/feature.png"
-            alt=""
-            class="w-[16px] h-[16px]"
-          />
+        <div class="flex items-center w-[241px] h-[38px] rounded-[40px]">
           <p
-            class="font-[500] text-[13px] leading-[20px] text-[#726AFF] ml-[8px]"
+            class="font-[500] text-[13px] leading-[20px] text-[#726AFF]"
           >
-            Explore Trending Topics
+            ⚡ Explore Trending Topics
           </p>
         </div>
       </div>
 
-      <div class="mt-[16px] flex flex-wrap justify-between items-center">
+      <div class="flex flex-wrap justify-between items-center">
         <div
           class="mt-[10px] text-[#0B1B0C] min-w-max px-[20px] h-[37px] px-[10px] border border-[#D3D3D3] flex justify-center items-center rounded-full bg-[#FFFFFF]"
         >
@@ -351,7 +344,7 @@
           <p class="font-[500] text-[14px] leading-[20px]">News</p>
         </div>
 
-          <div
+        <div
           class="mt-[10px] text-[#0B1B0C] min-w-max px-[20px] h-[37px] px-[10px] border border-[#D3D3D3] flex justify-center items-center rounded-full bg-[#FFFFFF]"
         >
           <p class="font-[500] text-[14px] leading-[20px]">News</p>
@@ -360,12 +353,16 @@
     </div>
     <!-- -----------------Featured Stocks--------------- -->
 
-    <div class="flex flex-col md:flex-row justify-between mx-[7vw] mt-[60px]">
-      <div class="w-full md:w-[70%]">
-        <div class="grid grid-cols-2 gap-[30px]">
+    <div
+      class="flex flex-col md:flex-row justify-between md:mx-[7vw] mt-[47px] md:mt-[60px]"
+    >
+      <div
+        class="w-full md:w-[70%] bg-[#F7F7F7] md:bg-[#FFFFFF] py-[50px] md:py-0"
+      >
+        <div class="grid grid-cols-2 gap-[16px] md:gap-[30px] mx-[7vw] md:mx-0">
           <div>
             <div
-              class="h-[140px] md:h-[298px] border border-[#D3D3D3] rounded-[18px] bg-[#FFFFFF]"
+              class="h-[140px] md:h-[298px] md:border border-[#D3D3D3] rounded-[18px] md:bg-[#FFFFFF]"
             >
               <div
                 class="hidden md:flex justify-end items-end pt-[24px] pr-[24px]"
@@ -380,36 +377,43 @@
                 />
               </div>
             </div>
+            <div class="bg-[#FFFFFF] p-[16px] md:p-0 rounded-b-[14px]">
+              <div class="flex justify-between items-center mt-[10px]">
+                <div>
+                  <h3
+                    class="font-[500] text-[18px] md:text-[24px] leading-[28px] md:leading-[35px] text-[#0B1B0C]"
+                  >
+                    PIA
+                  </h3>
+                  <p
+                    class="hidden md:block font-[500] text-[14px] md:text-[18px] leading-[20px] md:leading-[35px] text-[#8A8A8A]"
+                  >
+                    October 15, 2025
+                  </p>
+                </div>
+                <img
+                  src="./Assets/download.png"
+                  alt=""
+                  class="w-[53px] h-[53px] hidden md:block"
+                />
 
-            <div class="flex justify-between items-center mt-[10px]">
-              <div>
-                <h3
-                  class="font-[500] text-[18px] md:text-[24px] leading-[28px] md:leading-[35px] text-[#0B1B0C]"
-                >
-                  PIA
-                </h3>
-                <p
-                  class="hidden md:block font-[500] text-[14px] md:text-[18px] leading-[20px] md:leading-[35px] text-[#8A8A8A]"
-                >
-                  October 15, 2025
-                </p>
+                <img
+                  src="./Assets/new_download.png"
+                  alt=""
+                  class="w-[38px] h-[38px] block md:hidden"
+                />
               </div>
-              <img
-                src="./Assets/download.png"
-                alt=""
-                class="w-[53px] h-[53px]"
-              />
+              <p
+                class="block md:hidden font-[500] text-[14px] md:text-[18px] leading-[20px] md:leading-[35px] text-[#8A8A8A]"
+              >
+                October 15, 2025
+              </p>
             </div>
-            <p
-              class="block md:hidden font-[500] text-[14px] md:text-[18px] leading-[20px] md:leading-[35px] text-[#8A8A8A]"
-            >
-              October 15, 2025
-            </p>
           </div>
 
           <div>
             <div
-              class="h-[140px] md:h-[298px] border border-[#D3D3D3] rounded-[18px] bg-[#FFFFFF]"
+              class="h-[140px] md:h-[298px] md:border border-[#D3D3D3] rounded-[18px] md:bg-[#FFFFFF]"
             >
               <div
                 class="hidden md:flex justify-end items-end pt-[24px] pr-[24px]"
@@ -424,36 +428,43 @@
                 />
               </div>
             </div>
+            <div class="bg-[#FFFFFF] p-[16px] md:p-0 rounded-b-[14px]">
+              <div class="flex justify-between items-center mt-[10px]">
+                <div>
+                  <h3
+                    class="font-[500] text-[18px] md:text-[24px] leading-[28px] md:leading-[35px] text-[#0B1B0C]"
+                  >
+                    PIA
+                  </h3>
+                  <p
+                    class="hidden md:block font-[500] text-[14px] md:text-[18px] leading-[20px] md:leading-[35px] text-[#8A8A8A]"
+                  >
+                    October 15, 2025
+                  </p>
+                </div>
+                <img
+                  src="./Assets/download.png"
+                  alt=""
+                  class="w-[53px] h-[53px] hidden md:block"
+                />
 
-            <div class="flex justify-between items-center mt-[10px]">
-              <div>
-                <h3
-                  class="font-[500] text-[18px] md:text-[24px] leading-[28px] md:leading-[35px] text-[#0B1B0C]"
-                >
-                  PIA
-                </h3>
-                <p
-                  class="hidden md:block font-[500] text-[14px] md:text-[18px] leading-[20px] md:leading-[35px] text-[#8A8A8A]"
-                >
-                  October 15, 2025
-                </p>
+                <img
+                  src="./Assets/new_download.png"
+                  alt=""
+                  class="w-[38px] h-[38px] block md:hidden"
+                />
               </div>
-              <img
-                src="./Assets/download.png"
-                alt=""
-                class="w-[53px] h-[53px]"
-              />
+              <p
+                class="block md:hidden font-[500] text-[14px] md:text-[18px] leading-[20px] md:leading-[35px] text-[#8A8A8A]"
+              >
+                October 15, 2025
+              </p>
             </div>
-            <p
-              class="block md:hidden font-[500] text-[14px] md:text-[18px] leading-[20px] md:leading-[35px] text-[#8A8A8A]"
-            >
-              October 15, 2025
-            </p>
           </div>
 
           <div>
             <div
-              class="h-[140px] md:h-[298px] border border-[#D3D3D3] rounded-[18px] bg-[#FFFFFF]"
+              class="h-[140px] md:h-[298px] md:border border-[#D3D3D3] rounded-[18px] md:bg-[#FFFFFF]"
             >
               <div
                 class="hidden md:flex justify-end items-end pt-[24px] pr-[24px]"
@@ -468,36 +479,43 @@
                 />
               </div>
             </div>
+            <div class="bg-[#FFFFFF] p-[16px] md:p-0 rounded-b-[14px]">
+              <div class="flex justify-between items-center mt-[10px]">
+                <div>
+                  <h3
+                    class="font-[500] text-[18px] md:text-[24px] leading-[28px] md:leading-[35px] text-[#0B1B0C]"
+                  >
+                    PIA
+                  </h3>
+                  <p
+                    class="hidden md:block font-[500] text-[14px] md:text-[18px] leading-[20px] md:leading-[35px] text-[#8A8A8A]"
+                  >
+                    October 15, 2025
+                  </p>
+                </div>
+                <img
+                  src="./Assets/download.png"
+                  alt=""
+                  class="w-[53px] h-[53px] hidden md:block"
+                />
 
-            <div class="flex justify-between items-center mt-[10px]">
-              <div>
-                <h3
-                  class="font-[500] text-[18px] md:text-[24px] leading-[28px] md:leading-[35px] text-[#0B1B0C]"
-                >
-                  PIA
-                </h3>
-                <p
-                  class="hidden md:block font-[500] text-[14px] md:text-[18px] leading-[20px] md:leading-[35px] text-[#8A8A8A]"
-                >
-                  October 15, 2025
-                </p>
+                <img
+                  src="./Assets/new_download.png"
+                  alt=""
+                  class="w-[38px] h-[38px] block md:hidden"
+                />
               </div>
-              <img
-                src="./Assets/download.png"
-                alt=""
-                class="w-[53px] h-[53px]"
-              />
+              <p
+                class="block md:hidden font-[500] text-[14px] md:text-[18px] leading-[20px] md:leading-[35px] text-[#8A8A8A]"
+              >
+                October 15, 2025
+              </p>
             </div>
-            <p
-              class="block md:hidden font-[500] text-[14px] md:text-[18px] leading-[20px] md:leading-[35px] text-[#8A8A8A]"
-            >
-              October 15, 2025
-            </p>
           </div>
 
           <div>
             <div
-              class="h-[140px] md:h-[298px] border border-[#D3D3D3] rounded-[18px] bg-[#FFFFFF]"
+              class="h-[140px] md:h-[298px] md:border border-[#D3D3D3] rounded-[18px] md:bg-[#FFFFFF]"
             >
               <div
                 class="hidden md:flex justify-end items-end pt-[24px] pr-[24px]"
@@ -512,36 +530,43 @@
                 />
               </div>
             </div>
+            <div class="bg-[#FFFFFF] p-[16px] md:p-0 rounded-b-[14px]">
+              <div class="flex justify-between items-center mt-[10px]">
+                <div>
+                  <h3
+                    class="font-[500] text-[18px] md:text-[24px] leading-[28px] md:leading-[35px] text-[#0B1B0C]"
+                  >
+                    PIA
+                  </h3>
+                  <p
+                    class="hidden md:block font-[500] text-[14px] md:text-[18px] leading-[20px] md:leading-[35px] text-[#8A8A8A]"
+                  >
+                    October 15, 2025
+                  </p>
+                </div>
+                <img
+                  src="./Assets/download.png"
+                  alt=""
+                  class="w-[53px] h-[53px] hidden md:block"
+                />
 
-            <div class="flex justify-between items-center mt-[10px]">
-              <div>
-                <h3
-                  class="font-[500] text-[18px] md:text-[24px] leading-[28px] md:leading-[35px] text-[#0B1B0C]"
-                >
-                  PIA
-                </h3>
-                <p
-                  class="hidden md:block font-[500] text-[14px] md:text-[18px] leading-[20px] md:leading-[35px] text-[#8A8A8A]"
-                >
-                  October 15, 2025
-                </p>
+                <img
+                  src="./Assets/new_download.png"
+                  alt=""
+                  class="w-[38px] h-[38px] block md:hidden"
+                />
               </div>
-              <img
-                src="./Assets/download.png"
-                alt=""
-                class="w-[53px] h-[53px]"
-              />
+              <p
+                class="block md:hidden font-[500] text-[14px] md:text-[18px] leading-[20px] md:leading-[35px] text-[#8A8A8A]"
+              >
+                October 15, 2025
+              </p>
             </div>
-            <p
-              class="block md:hidden font-[500] text-[14px] md:text-[18px] leading-[20px] md:leading-[35px] text-[#8A8A8A]"
-            >
-              October 15, 2025
-            </p>
           </div>
         </div>
       </div>
       <div class="w-full md:w-[30%]">
-        <div class="flex justify-end mt-[26px] md:mt-0">
+        <div class="flex justify-center md:justify-end mt-[26px] md:mt-0">
           <div
             class="md:border border-[#D3D3D3] w-[335px] rounded-[18px] md:p-[18px] h-[600px]"
           >
@@ -552,7 +577,7 @@
             </h3>
 
             <div
-              class="flex justify-between items-center mt-[12px] px-[12px] py-[18px] border-b-[0.56px] border-[#F0F0F0]"
+              class="flex justify-between items-center mt-[12px] px-[12px] py-[18px] border-x-[0.58px] border-t-[0.58px] md:border-x-[0px] md:border-t-[0px] border-b-[0.56px]  border-[#F0F0F0] rounded-[14px] md:rounded-[0px]"
             >
               <div class="flex items-center">
                 <img
@@ -584,7 +609,7 @@
             </div>
 
             <div
-              class="flex justify-between items-center mt-[12px] px-[12px] py-[18px] border-b-[0.56px] border-[#F0F0F0]"
+              class="flex justify-between items-center mt-[12px] px-[12px] py-[18px] border-x-[0.58px] border-t-[0.58px] md:border-x-[0px] md:border-t-[0px] border-b-[0.56px]  border-[#F0F0F0] rounded-[14px] md:rounded-[0px]"
             >
               <div class="flex items-center">
                 <img
@@ -616,7 +641,7 @@
             </div>
 
             <div
-              class="flex justify-between items-center mt-[12px] px-[12px] py-[18px] border-b-[0.56px] border-[#F0F0F0]"
+              class="flex justify-between items-center mt-[12px] px-[12px] py-[18px] border-x-[0.58px] border-t-[0.58px] md:border-x-[0px] md:border-t-[0px] border-b-[0.56px]  border-[#F0F0F0] rounded-[14px] md:rounded-[0px]"
             >
               <div class="flex items-center">
                 <img
@@ -648,7 +673,7 @@
             </div>
 
             <div
-              class="flex justify-between items-center mt-[12px] px-[12px] py-[18px] border-b-[0.56px] border-[#F0F0F0]"
+              class="flex justify-between items-center mt-[12px] px-[12px] py-[18px] border-x-[0.58px] border-t-[0.58px] md:border-x-[0px] md:border-t-[0px] border-b-[0.56px]  border-[#F0F0F0] rounded-[14px] md:rounded-[0px]"
             >
               <div class="flex items-center">
                 <img
@@ -680,7 +705,7 @@
             </div>
 
             <div
-              class="flex justify-between items-center mt-[12px] px-[12px] py-[18px]"
+              class="flex justify-between items-center mt-[12px] px-[12px] py-[18px] border-x-[0.58px] border-t-[0.58px] md:border-x-[0px] md:border-t-[0px] border-b-[0.56px] md:border-b-[0px]  border-[#F0F0F0] rounded-[14px] md:rounded-[0px]"
             >
               <div class="flex items-center">
                 <img
@@ -1000,7 +1025,7 @@
         class="mt-[40px] border-t border-[#FFFFFF1A] py-[20px] flex justify-between"
       >
         <p class="font-[400] text-[14px] leading-[21px] text-[#FFFFFF99]">
-          © 2024 IELtrade. All rights reserved.
+          © 2026 IELtrade. All rights reserved.
         </p>
         <div class="flex">
           <img
@@ -1008,11 +1033,11 @@
             alt=""
             class="w-[20px] h-[20px]"
           />
-          <img
+          <!-- <img
             src="./Assets/icons/github.png"
             alt=""
             class="w-[20px] h-[20px] ml-[24px]"
-          />
+          /> -->
           <img
             src="./Assets/icons/linkedin.png"
             alt=""
