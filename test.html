@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact Form</title>
+
+    <!-- 1. Load the Supabase library FIRST -->
+    <!-- or more explicit version: -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script> -->
+  </head>
+  <body>
+    <!-- your HTML form here -->
+
+    <!-- 2. Your own script comes AFTER the library is loaded -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+      // At this point Supabase SHOULD be available
+
+      console.log("Is Supabase defined?", typeof Supabase !== "undefined");
+      console.log("Supabase object keys:", Object.keys(Supabase || {}));
+
+      const supabaseUrl = "https://bfxmfaakufrmzcxhtgfw.supabase.co";
+      const supabaseKey =
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJmeG1mYWFrdWZybXpjeGh0Z2Z3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4MTQzMTIsImV4cCI6MjA3NTM5MDMxMn0.qtNn0qXNhn8ol8fTSb2Hp9nQkYfFA2Y_Zec4LuISPZQ";
+
+      function initSupabase() {
+        if (typeof Supabase === "undefined") {
+          console.warn("Supabase not loaded yet, waiting...");
+          setTimeout(initSupabase, 100);
+          return;
+        }
+
+        // Supabase is now available
+        const supabaseClient = Supabase.createClient(supabaseUrl, supabaseKey);
+        console.log("Client ready!", supabaseClient);
+      }
+
+      initSupabase();
+    </script>
+  </body>
+</html>

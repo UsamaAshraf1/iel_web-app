@@ -17,6 +17,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
     />
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   </head>
 
   <body>
@@ -210,7 +212,7 @@
                 <img
                   src="./Assets/slider_one.png"
                   alt=""
-                  class="w-[500px] h-[600px]"
+                  class="w-[500px] h-[550px]"
                 />
               </div>
             </div>
@@ -268,12 +270,12 @@
                 <img
                   src="./Assets/slider_2_img_1.png"
                   alt=""
-                  class="w-[500px] h-[400px]"
+                  class="w-[500px] h-[400px] z-10"
                 />
                 <img
                   src="./Assets/slider_2_img_2.png"
                   alt=""
-                  class="w-[500px] h-[218px]"
+                  class="w-[400px] h-[228px] -mt-[35px] z-9"
                 />
               </div>
             </div>
@@ -335,7 +337,7 @@
           </div> -->
             </div>
 
-            <div class="flex justify-between md:mt-[60px] overflow-hidden">
+            <div class="flex justify-between overflow-hidden">
               <img
                 src="./Assets/slider_3_img_1.png"
                 alt=""
@@ -344,7 +346,7 @@
               <img
                 src="./Assets/slider_3_img_2.png"
                 alt=""
-                class="w-[148px] md:w-[432px] h-[148px] md:h-[329px] mt-[50px] md:mt-[100px]"
+                class="w-[148px] md:w-[432px] h-[148px] md:h-[310px] mt-[50px] md:mt-[120px]"
               />
               <img
                 src="./Assets/slider_3_img_3.png"
@@ -700,14 +702,26 @@
           </button>
         </div>
         <div class="w-full md:w-[70%] mt-[30px] md:mt-0">
-          <div class="w-full max-h-[500px] md:pl-[200px]">
-            <div id="roiValue" class="mb-6">
-              <div class="text-5xl font-bold text-[#53BA83]" id="totalReturn">
-                PKR 0
+          <div class="w-full md:pl-[200px]">
+            <div
+              class="bg-[#FFFFFF0D] max-h-[550px] px-[20px] pt-[40px] pb-[140px] rounded-[32px] border border-[#FFFFFF1A]"
+            >
+              <div id="roiValue" class="mb-6">
+                <div
+                  class="font-[600] text-[20px] leading-[22px] text-[#FFFFFFB2]"
+                >
+                  ROI Chart
+                </div>
+                <div
+                  class="text-[58px] font-[700] leading-[72px] text-[#A8E6C5]"
+                  id="totalReturn"
+                >
+                  PKR 0
+                </div>
               </div>
-            </div>
 
-            <canvas id="roiChart" height="280"></canvas>
+              <canvas id="roiChart" height="280"></canvas>
+            </div>
           </div>
         </div>
       </div>
@@ -1088,11 +1102,11 @@
             alt=""
             class="w-[20px] h-[20px]"
           />
-          <img
+          <!-- <img
             src="./Assets/icons/github.png"
             alt=""
             class="w-[20px] h-[20px] ml-[24px]"
-          />
+          /> -->
           <img
             src="./Assets/icons/linkedin.png"
             alt=""
@@ -1107,10 +1121,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script> -->
-    <!-- <script src="./supabase.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script>
+    <!-- <script>
       (function initializeSupabase() {
         // Prevent multiple initializations
         if (window.supabaseClient) {
@@ -1147,7 +1158,6 @@
       })();
     </script>
 
-    <!-- Your form handling script -->
     <script>
       const form = document.getElementById("contact-form");
       const submitBtn = document.getElementById("submit-btn");
@@ -1198,50 +1208,8 @@
           btnText.textContent = "Send Message";
         }
       });
-    </script>
+    </script> -->
     <script>
-      // slick slider
-      // $(document).ready(function () {
-      //   $(".autoplay-slider").slick({
-      //     slidesToShow: 3, // how many slides visible at once
-      //     slidesToScroll: 1, // how many to scroll at a time
-      //     autoplay: true,
-      //     autoplaySpeed: 2000, // 2 seconds
-      //     speed: 800, // transition speed
-      //     pauseOnHover: true,
-      //     pauseOnFocus: false,
-      //     pauseOnDotsHover: true,
-      //     infinite: true,
-      //     arrows: true,
-      //     dots: true,
-      //     centerMode: true, // nice center slide effect
-      //     centerPadding: "60px",
-      //     responsive: [
-      //       {
-      //         breakpoint: 1024,
-      //         settings: {
-      //           slidesToShow: 3,
-      //           centerPadding: "40px",
-      //         },
-      //       },
-      //       {
-      //         breakpoint: 768,
-      //         settings: {
-      //           slidesToShow: 2,
-      //           centerPadding: "30px",
-      //         },
-      //       },
-      //       {
-      //         breakpoint: 480,
-      //         settings: {
-      //           slidesToShow: 1,
-      //           centerPadding: "20px",
-      //         },
-      //       },
-      //     ],
-      //   });
-      // });
-
       $(".autoplay-slider").slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -1254,7 +1222,7 @@
         dots: false,
         pauseOnHover: false,
         pauseOnDotsHover: false,
-        adaptiveHeight: true,
+        adaptiveHeight: false,
         infinite: true,
       });
       // Accordians
@@ -1292,7 +1260,7 @@
         trigger.addEventListener("click", () => toggleAccordion(trigger));
       });
     </script>
-
+    <script src="supabase.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>
