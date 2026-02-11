@@ -31,9 +31,9 @@
         );
       "
     >
-      <div class="pt-10">
+      <div class="md:pt-10">
         <div
-          class="mx-[7vw] bg-white rounded-[24px] shadow-[0_0_12px_0_#9D9D9D59] p-5 md:p-[18px]"
+          class="md:mx-[7vw] bg-white md:rounded-[24px] shadow-[0_0_12px_0_#9D9D9D59] p-5 md:p-[18px]"
         >
           <div class="flex items-center justify-between">
             <!-- Logo -->
@@ -165,9 +165,11 @@
 
       <div class="autoplay-slider">
         <div class="slide">
-          <div class="mx-[7vw] mt-[65px] md:mt-[150px] pb-[100px]">
+          <div class="mx-[7vw] mt-[24px] md:mt-[150px] md:pb-[100px]">
             <div class="flex flex-col md:flex-row justify-between">
-              <div class="w-full md:w-[60%]">
+              <div
+                class="w-full md:w-[60%] flex flex-col justify-center md:justify-start items-center md:items-start"
+              >
                 <div class="flex">
                   <div
                     class="flex justify-center items-center w-[260px] h-[48px] rounded-[40px] bg-[#FFFFFF] border border-[#726AFF33]"
@@ -180,7 +182,9 @@
                   </div>
                 </div>
 
-                <div>
+                <div
+                  class="flex flex-col justify-center md:justify-start items-center md:items-start text-center md:text-start"
+                >
                   <h1
                     class="font-[500] text-[36px] md:text-[72px] leading-[40px] md:leading-[74px] text-[#0B1B0C] mt-[15px]"
                   >
@@ -212,7 +216,7 @@
                 <img
                   src="./Assets/slider_one.png"
                   alt=""
-                  class="w-[500px] h-[550px]"
+                  class="w-full md:w-[500px] h-[340px] md:h-[550px]"
                 />
               </div>
             </div>
@@ -220,11 +224,13 @@
         </div>
 
         <div class="slide">
-          <div class="mx-[7vw] mt-[65px] pb-[100px]">
+          <div class="mx-[7vw] mt-[24px] md:pb-[100px]">
             <div
               class="flex flex-col md:flex-row justify-center md:justify-between"
             >
-              <div class="w-full md:w-[60%]">
+              <div
+                class="w-full md:w-[60%] flex flex-col justify-center md:justify-start items-center md:items-start"
+              >
                 <div class="flex">
                   <div
                     class="flex justify-center items-center w-[260px] h-[48px] rounded-[40px] bg-[#FFFFFF] border border-[#726AFF33]"
@@ -237,7 +243,9 @@
                   </div>
                 </div>
 
-                <div>
+                <div
+                  class="flex flex-col justify-center md:justify-start items-center md:items-start text-center md:text-start"
+                >
                   <h1
                     class="font-[500] text-[36px] md:text-[72px] leading-[40px] md:leading-[74px] text-[#0B1B0C] mt-[15px]"
                   >
@@ -270,12 +278,12 @@
                 <img
                   src="./Assets/slider_2_img_1.png"
                   alt=""
-                  class="w-[500px] h-[400px] z-10"
+                  class="w-full md:w-[500px] h-full md:h-[400px] z-10"
                 />
                 <img
                   src="./Assets/slider_2_img_2.png"
                   alt=""
-                  class="w-[400px] h-[228px] -mt-[35px] z-9"
+                  class="w-[300px] md:w-[400px] h-[150px] md:h-[228px] -mt-[25px] md:-mt-[35px] z-9"
                 />
               </div>
             </div>
@@ -284,7 +292,7 @@
 
         <!-- Slide 3 -->
         <div class="slide">
-          <div class="mt-[50px]">
+          <div class="mt-[24px] md:mt-[50px]">
             <div class="mx-[7vw]">
               <div class="w-[100%]">
                 <div class="flex justify-center items-center">
@@ -337,7 +345,9 @@
           </div> -->
             </div>
 
-            <div class="flex justify-between overflow-hidden">
+            <div
+              class="hidden md:flex justify-between overflow-hidden mt-[100px] md:mt-0"
+            >
               <img
                 src="./Assets/slider_3_img_1.png"
                 alt=""
@@ -354,12 +364,32 @@
                 class="w-[148px] md:w-[432px] h-[148px] md:h-[429px]"
               />
             </div>
+
+            <div
+              class="flex justify-between overflow-hidden mt-[100px] md:mt-0 md:hidden"
+            >
+              <img
+                src="./Assets/slider_3_img_4.png"
+                alt=""
+                class="w-[148px] md:w-[432px] h-[148px] md:h-[429px]"
+              />
+              <img
+                src="./Assets/slider_3_img_6.png"
+                alt=""
+                class="w-[151px] md:w-[432px] h-[128px] md:h-[310px] mt-[50px] md:mt-[120px]"
+              />
+              <img
+                src="./Assets/slider_3_img_5.png"
+                alt=""
+                class="w-[148px] md:w-[432px] h-[169px] md:h-[429px]"
+              />
+            </div>
           </div>
         </div>
       </div>
     </div>
     <!-- ------------Three steps to start building wealth--------------- -->
-    <div class="md:h-[397px] bg-[#062B08] py-[85px]">
+    <div class="md:h-[397px] bg-[#062B08] py-[50px] md:py-[85px]">
       <div class="px-[7vw]">
         <h3
           class="text-white text-[30px] md:text-[58px] font-[600] leading-[36px] md:leading-[63px] text-center"
@@ -395,7 +425,7 @@
     </div>
 
     <!-- --------------Boost Your Finances with IEL Investments-------------- -->
-    <div class="mt-[58px] mx-[7vw]">
+    <div class="mt-[47px] md:mt-[58px] mx-[7vw]">
       <div class="flex justify-between">
         <div class="w-full md:w-[65%]">
           <div class="flex justify-center md:justify-start">
@@ -514,7 +544,7 @@
     </div>
 
     <!-- ---------------------Easy to Start, Built to  Grow-------------------- -->
-    <div class="mx-[7vw] py-[100px] mt-[60px]">
+    <div class="mx-[7vw] py-[50px] md:py-[100px] md:mt-[60px]">
       <div class="flex flex-col justify-center items-center">
         <p
           class="bg-white border border-[#726AFF33] rounded-full px-[24px] py-[8px] w-[220px] text-[#726AFF] text-center"
@@ -528,7 +558,9 @@
           Easy to Start, Built to <span class="text-[#53BA83]">Grow </span>
         </h2>
       </div>
-      <div class="flex flex-col-reverse md:flex-row justify-between mt-[93px]">
+      <div
+        class="flex flex-col-reverse md:flex-row justify-between mt-[50px] md:mt-[93px]"
+      >
         <div class="w-full md:max-w-[476px] mt-[30px] md:mt-0">
           <h3
             class="font-[600] text-[24px] md:text-[40px] leading-[32px] md:leading-[46px] text-[#0B1B0C]"
@@ -574,7 +606,7 @@
       </div>
 
       <div
-        class="flex flex-col-reverse md:flex-row-reverse justify-between mt-[91px]"
+        class="flex flex-col-reverse md:flex-row-reverse justify-between mt-[50px] md:mt-[91px]"
       >
         <div class="w-full md:max-w-[476px] mt-[32px] md:mt-0">
           <h3
@@ -617,7 +649,7 @@
     </div>
 
     <!-- ---------------We grow when you grow---------------------- -->
-    <div class="px-[7vw] py-[100px] bg-[#062B08]">
+    <div class="px-[7vw] py-[50px] md:py-[100px] bg-[#062B08]">
       <h1
         class="font-[700] text-[30px] md:text-[58px] leading-[36px] md:leading-[62px] text-[#FFFFFF] text-center"
       >
@@ -632,7 +664,9 @@
         business model.
       </p>
       <div class="flex flex-col md:flex-row mt-[60px]">
-        <div class="w-full md:w-[30%]">
+        <div
+          class="bg-[#FFFFFF0D] md:bg-trnsparent p-[24px] md:0 rounded-[16px] md:rounded-0 border border-[#FFFFFF1A] md:border-none w-full md:w-[30%]"
+        >
           <!-- Symbol Field with Search + Dropdown -->
           <div>
             <label
@@ -704,16 +738,16 @@
         <div class="w-full md:w-[70%] mt-[30px] md:mt-0">
           <div class="w-full md:pl-[200px]">
             <div
-              class="bg-[#FFFFFF0D] max-h-[550px] px-[20px] pt-[40px] pb-[140px] rounded-[32px] border border-[#FFFFFF1A]"
+              class="bg-[#FFFFFF0D] max-h-[410px] md:max-h-[550px] px-[20px] pt-[40px] pb-[100px] md:pb-[140px] rounded-[32px] border border-[#FFFFFF1A]"
             >
               <div id="roiValue" class="mb-6">
                 <div
-                  class="font-[600] text-[20px] leading-[22px] text-[#FFFFFFB2]"
+                  class="font-[600] text-[20px] leading-[22px] text-[#FFFFFFB2] mb-[10px]"
                 >
                   ROI Chart
                 </div>
                 <div
-                  class="text-[58px] font-[700] leading-[72px] text-[#A8E6C5]"
+                  class="text-[36px] md:text-[58px] font-[700] leading-[40px] md:leading-[72px] text-[#A8E6C5]"
                   id="totalReturn"
                 >
                   PKR 0
@@ -727,7 +761,7 @@
       </div>
     </div>
     <!-- --------------------------Questions? We've Got Answers----------------- -->
-    <div class="mt-[60px] mx-[7vw]">
+    <div class="mt-[50px] md:mt-[60px] mx-[7vw]">
       <div class="flex justify-center">
         <div
           class="flex justify-center items-center w-[135px] h-[38px] rounded-[40px] bg-[#FFFFFF] border border-[#726AFF33]"
@@ -766,23 +800,22 @@
           <div
             class="accordion-trigger transition-all duration-300 w-full px-6 py-5 cursor-pointer"
           >
-            <button
-              class="category-btn bg-[#F0F0F0] px-[12px] py-[4px] rounded-full text-[#8A8A8A] font-[600] text-[12px] leading-[18px] transition-colors duration-300 border-none border-[#726AFF]"
-            >
-              Getting Started
-            </button>
-
-            <div
-              class="flex justify-between items-center text-left w-full mt-3"
-            >
-              <span
-                class="title-text font-[700] text-[20px] text-[#0B1B0C] leading-[30px] transition-colors duration-300"
-              >
-                How much money do I need to start investing?
-              </span>
+            <div class="flex justify-between text-left w-full">
+              <div>
+                <button
+                  class="category-btn bg-[#F0F0F0] px-[12px] py-[4px] rounded-full text-[#8A8A8A] font-[600] text-[12px] leading-[18px] transition-colors duration-300 border-none border-[#726AFF]"
+                >
+                  Getting Started
+                </button>
+                <div
+                  class="title-text font-[700] text-[20px] text-[#0B1B0C] leading-[30px] transition-colors duration-300 mt-3"
+                >
+                  How much money do I need to start investing?
+                </div>
+              </div>
 
               <div
-                class="w-[40px] h-[40px] flex items-center justify-center text-[#726AFF] text-2xl font-bold transition-transform duration-300 accordion-icon"
+                class="w-[80px] h-[40px] flex items-center justify-center text-[#726AFF] text-2xl font-bold transition-transform duration-300 accordion-icon"
               >
                 <span class="plus-sign">
                   <img
@@ -814,57 +847,6 @@
             </div>
           </div>
         </div>
-        <!-- <div
-          class="accordiandiv border-[2px] border-[#E5E7EB] rounded-[20px] overflow-hidden bg-white shadow-md"
-        >
-          <div
-            class="accordion-trigger transition-all duration-300 w-full px-6 py-5 cursor-pointer"
-          >
-            <button
-              class="bg-[#F0F0F0] px-[12px] py-[4px] rounded-full text-[#8A8A8A] font-[600] text-[12px] leading-[18px]"
-            >
-              Getting Started
-            </button>
-            <div
-              class="flex justify-between items-center text-left w-full mt-3"
-            >
-              <span
-                class="font-[700] text-[20px] text-[#0B1B0C] leading-[30px]"
-              >
-                How much money do I need to start investing?
-              </span>
-
-              <div
-                class="w-[40px] h-[40px] flex items-center justify-center text-[#726AFF] text-2xl font-bold transition-transform duration-300 accordion-icon"
-              >
-                <span class="plus-sign"
-                  ><img
-                    src="./Assets/icons/plus_btn.png"
-                    alt=""
-                    class="w-[40px] h-[40px]"
-                /></span>
-                <span class="minus-sign hidden"
-                  ><img
-                    src="./Assets/icons/minus_btn.png"
-                    alt=""
-                    class="w-[40px] h-[40px]"
-                /></span>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out"
-          >
-            <div
-              class="px-6 pb-6 pt-1 text-[#5A5A5A] font-[400] text-[16px] leading-[27.2px]"
-            >
-              You can start with as little as Rs 5,000. That's less than most
-              people spend on monthly dining out. The important thing isn't how
-              much you start with—it's that you start.
-            </div>
-          </div>
-        </div> -->
 
         <div
           class="accordiandiv border-[2px] border-[#E5E7EB] rounded-[20px] overflow-hidden bg-white shadow-md transition-colors duration-300"
@@ -872,23 +854,22 @@
           <div
             class="accordion-trigger transition-all duration-300 w-full px-6 py-5 cursor-pointer"
           >
-            <button
-              class="category-btn bg-[#F0F0F0] px-[12px] py-[4px] rounded-full text-[#8A8A8A] font-[600] text-[12px] leading-[18px] transition-colors duration-300 border-none border-[#726AFF]"
-            >
-              Security
-            </button>
-
-            <div
-              class="flex justify-between items-center text-left w-full mt-3"
-            >
-              <span
-                class="title-text font-[700] text-[20px] text-[#0B1B0C] leading-[30px] transition-colors duration-300"
-              >
-                Is my money safe with IEL Trade?
-              </span>
+            <div class="flex justify-between text-left w-full">
+              <div>
+                <button
+                  class="category-btn bg-[#F0F0F0] px-[12px] py-[4px] rounded-full text-[#8A8A8A] font-[600] text-[12px] leading-[18px] transition-colors duration-300 border-none border-[#726AFF]"
+                >
+                  Getting Started
+                </button>
+                <div
+                  class="title-text font-[700] text-[20px] text-[#0B1B0C] leading-[30px] transition-colors duration-300 mt-3"
+                >
+                  How much money do I need to start investing?
+                </div>
+              </div>
 
               <div
-                class="w-[40px] h-[40px] flex items-center justify-center text-[#726AFF] text-2xl font-bold transition-transform duration-300 accordion-icon"
+                class="w-[80px] h-[40px] flex items-center justify-center text-[#726AFF] text-2xl font-bold transition-transform duration-300 accordion-icon"
               >
                 <span class="plus-sign">
                   <img
@@ -923,7 +904,7 @@
       </div>
     </div>
     <!-- ------------------------Every person is different. Pick what works for you.---------------------------- -->
-    <div class="bg-[#062B08] py-[100px] px-[7vw] mt-[58px]">
+    <div class="bg-[#062B08] py-[50px] md:py-[100px] px-[7vw] mt-[58px]">
       <div class="flex justify-center">
         <div
           class="flex justify-center items-center w-[135px] h-[38px] rounded-[40px] bg-[#726AFF1A] border border-[#726AFF33]"
@@ -1165,7 +1146,7 @@
         class="mt-[40px] border-t border-[#FFFFFF1A] py-[20px] flex justify-between"
       >
         <p class="font-[400] text-[14px] leading-[21px] text-[#FFFFFF99]">
-          © 2024 IELtrade. All rights reserved.
+          © 2026 IELtrade. All rights reserved.
         </p>
         <div class="flex">
           <img
@@ -1417,15 +1398,15 @@
               otherTrigger
                 .querySelector(".category-btn")
                 ?.classList.remove("text-[#53BA83]");
-              // otherTrigger
-              //   .querySelector(".category-btn")
-              //   ?.classList.add("text-[#8A8A8A]");
+              otherTrigger
+                .querySelector(".category-btn")
+                ?.classList.add("text-[#8A8A8A]");
               otherTrigger
                 .querySelector(".title-text")
                 ?.classList.remove("text-[#53BA83]");
-              // otherTrigger
-              //   .querySelector(".title-text")
-              //   ?.classList.add("text-[#0B1B0C]");
+              otherTrigger
+                .querySelector(".title-text")
+                ?.classList.add("text-[#0B1B0C]");
             }
           }
         });
