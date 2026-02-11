@@ -719,7 +719,7 @@
         class="mt-[40px] border-t border-[#FFFFFF1A] py-[20px] flex justify-between"
       >
         <p class="font-[400] text-[14px] leading-[21px] text-[#FFFFFF99]">
-          © 2026 IELtrade. All rights reserved.
+          © <span id="current-year"></span> IELtrade. All rights reserved.
         </p>
         <div class="flex">
           <img
@@ -741,6 +741,10 @@
       </div>
     </footer>
 
+    <script>
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
     <script>
       // Wait for the DOM to be fully loaded
       document.addEventListener("DOMContentLoaded", () => {

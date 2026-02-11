@@ -159,7 +159,7 @@
           <div class="w-full md:w-[70%]">
             <div class="flex justify-center md:justify-start">
               <div
-                class="flex justify-center items-center w-[260px] h-[48px] rounded-[40px] bg-[#FFFFFF] border border-[#726AFF33]"
+                class="flex justify-center items-center w-[260px] h-[48px] rounded-[40px] bg-[#FFFFFF] border border-[#726AFF33] shadow-md"
               >
                 <p class="font-[500] text-[16px] leading-[21px] text-[#726AFF]">
                   How IEL Trade Works?
@@ -209,7 +209,7 @@
       <div class="flex flex-col justify-center items-center">
         <div class="flex">
           <div
-            class="flex justify-center items-center w-[135px] h-[38px] rounded-[40px] bg-[#FFFFFF] border border-[#726AFF33]"
+            class="flex justify-center items-center w-[135px] h-[38px] rounded-[40px] bg-[#FFFFFF] border border-[#726AFF33] shadow-md"
           >
             <img
               src="./Assets/icons/feature.png"
@@ -349,7 +349,7 @@
         <div class="flex flex-col justify-center items-center">
           <div class="flex">
             <div
-              class="flex justify-center items-center w-[155px] h-[38px] rounded-[40px] bg-[#FFFFFF] border border-[#726AFF33]"
+              class="flex justify-center items-center w-[155px] h-[38px] rounded-[40px] bg-[#FFFFFF] border border-[#726AFF33] shadow-md"
             >
               <p
                 class="font-[500] text-[13px] leading-[20px] text-[#726AFF] ml-[8px]"
@@ -536,8 +536,12 @@
           <div
             class="bg-[#FFFFFF] p-[20px] rounded-[14px] border-l-[3.47px] border-l-[#53BA83]"
           >
-            <h3>Time Compounds, Not Timing</h3>
-            <p>
+            <h3 class="font-[600] text-[18px] leading-[28px] text-[#0B1B0C]">
+              Time Compounds, Not Timing
+            </h3>
+            <p
+              class="mt-[10px] font-[400] text-[14px] leading-[20px] text-[#8A8A8A]"
+            >
               Pakistan's stock market has delivered average annual returns
               exceeding inflation by significant margins over long periods.
               Consistent participation beats perfect timing.
@@ -547,8 +551,10 @@
           <div
             class="bg-[#FFFFFF] p-[20px] rounded-[14px] border-l-[3.47px] border-l-[#726AFF] mt-[16px]"
           >
-            <h3>Diversification Defends</h3>
-            <p>
+            <h3 class="font-[600] text-[18px] leading-[28px] text-[#0B1B0C]">
+              Diversification Defends
+            </h3>
+            <p  class="mt-[10px] font-[400] text-[14px] leading-[20px] text-[#8A8A8A]">
               Spreading capital across sectors, asset classes, and strategies
               reduces concentrated risk. Our portfolios engineer this protection
               automatically.
@@ -558,8 +564,8 @@
           <div
             class="bg-[#FFFFFF] p-[20px] rounded-[14px] border-l-[3.47px] border-l-[#53BA83] mt-[16px]"
           >
-            <h3>Strategy Beats Emotion</h3>
-            <p>
+            <h3 class="font-[600] text-[18px] leading-[28px] text-[#0B1B0C]">Strategy Beats Emotion</h3>
+            <p  class="mt-[10px] font-[400] text-[14px] leading-[20px] text-[#8A8A8A]">
               Markets fluctuate. Reactions create losses. Strategy creates
               wealth. Our research and systematic approach remove emotion from
               the equation.
@@ -569,8 +575,8 @@
           <div
             class="bg-[#FFFFFF] p-[20px] rounded-[14px] border-l-[3.47px] border-l-[#726AFF] mt-[16px]"
           >
-            <h3>Decisions Matter</h3>
-            <p>
+            <h3 class="font-[600] text-[18px] leading-[28px] text-[#0B1B0C]">Decisions Matter</h3>
+            <p  class="mt-[10px] font-[400] text-[14px] leading-[20px] text-[#8A8A8A]">
               Rs 5,000 invested monthly at 12% annual growth becomes over Rs 1.2
               million in 10 years. Consistency compounds. Starting matters more
               than size.
@@ -584,7 +590,7 @@
     <div class="bg-[#062B08] py-[50px] md:py-[100px] px-[7vw] md:mt-[58px]">
       <div class="flex justify-center">
         <div
-          class="flex justify-center items-center w-[135px] h-[38px] rounded-[40px] bg-[#726AFF1A] border border-[#726AFF33]"
+          class="flex justify-center items-center w-[135px] h-[38px] rounded-[40px] bg-[#726AFF1A] border border-[#726AFF33] shadow-md"
         >
           <img
             src="./Assets/icons/email.png"
@@ -823,7 +829,7 @@
         class="mt-[40px] border-t border-[#FFFFFF1A] py-[20px] flex justify-between"
       >
         <p class="font-[400] text-[14px] leading-[21px] text-[#FFFFFF99]">
-          © 2026 IELtrade. All rights reserved.
+          © <span id="current-year"></span> IELtrade. All rights reserved.
         </p>
         <div class="flex">
           <img
@@ -844,6 +850,11 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
 
     <script>
       // =============================================

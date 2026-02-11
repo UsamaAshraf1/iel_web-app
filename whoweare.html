@@ -165,7 +165,7 @@
           <div class="text-center">
             <div class="flex justify-center">
               <div
-                class="flex justify-center items-center w-[260px] h-[48px] rounded-[40px] bg-[#FFFFFF] border border-[#726AFF33]"
+                class="flex justify-center items-center w-[260px] h-[48px] rounded-[40px] bg-[#FFFFFF] border border-[#726AFF33] shadow-md"
               >
                 <p class="font-[500] text-[16px] leading-[21px] text-[#726AFF]">
                   Who we are
@@ -207,7 +207,7 @@
       <div class="flex flex-col justify-center items-center">
         <div class="flex">
           <div
-            class="flex justify-center items-center w-[135px] h-[38px] rounded-[40px] bg-[#FFFFFF] border border-[#726AFF33]"
+            class="flex justify-center items-center w-[135px] h-[38px] rounded-[40px] bg-[#FFFFFF] border border-[#726AFF33] shadow-md"
           >
             <img
               src="./Assets/icons/feature.png"
@@ -329,7 +329,7 @@
         <div class="flex flex-col justify-center items-center">
           <div class="flex">
             <div
-              class="flex justify-center items-center w-[135px] h-[38px] rounded-[40px] bg-[#FFFFFF] border border-[#726AFF33]"
+              class="flex justify-center items-center w-[135px] h-[38px] rounded-[40px] bg-[#FFFFFF] border border-[#726AFF33] shadow-md "
             >
               <p
                 class="font-[500] text-[13px] leading-[20px] text-[#726AFF] ml-[8px]"
@@ -642,7 +642,9 @@
             Let’s Begin
           </button>
         </div>
-        <div class="mt-[10px] md:mt-[43px] flex flex-col md:flex-row justify-between">
+        <div
+          class="mt-[10px] md:mt-[43px] flex flex-col md:flex-row justify-between"
+        >
           <div
             class="flex items-center border border-[#E5E7EB] md:border-none p-[24px] md:p-0 rounded-[12px] shadow-sm md:shadow-none"
           >
@@ -704,7 +706,7 @@
         <div class="flex flex-col justify-center items-center">
           <div class="flex">
             <div
-              class="flex justify-center items-center w-[135px] h-[38px] rounded-[40px] bg-[#FFFFFF] border border-[#726AFF33]"
+              class="flex justify-center items-center w-[135px] h-[38px] rounded-[40px] bg-[#FFFFFF] border border-[#726AFF33] shadow-md"
             >
               <p
                 class="font-[500] text-[13px] leading-[20px] text-[#726AFF] ml-[8px]"
@@ -778,7 +780,7 @@
     <div class="bg-[#062B08] py-[50px] md:py-[100px] px-[7vw] md:mt-[58px]">
       <div class="flex justify-center">
         <div
-          class="flex justify-center items-center w-[135px] h-[38px] rounded-[40px] bg-[#726AFF1A] border border-[#726AFF33]"
+          class="flex justify-center items-center w-[135px] h-[38px] rounded-[40px] bg-[#726AFF1A] border border-[#726AFF33] shadow-md"
         >
           <img
             src="./Assets/icons/email.png"
@@ -1017,7 +1019,7 @@
         class="mt-[40px] border-t border-[#FFFFFF1A] py-[20px] flex justify-between"
       >
         <p class="font-[400] text-[14px] leading-[21px] text-[#FFFFFF99]">
-          © 2026 IELtrade. All rights reserved.
+          © <span id="current-year"></span> IELtrade. All rights reserved.
         </p>
         <div class="flex">
           <img
@@ -1038,6 +1040,11 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- Slick JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
