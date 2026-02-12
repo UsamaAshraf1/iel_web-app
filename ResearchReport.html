@@ -61,7 +61,7 @@
                     href="ResearchReport.html"
                     class="text-[#53BA83] font-[600] text-[16px] leading-[21px] hover:text-[#53BA83] transition-colors duration-200"
                   >
-                    Research Reports
+                    Research
                   </a>
                 </li>
                 <li>
@@ -82,7 +82,7 @@
                 <button
                   class="px-[19px] py-[10px] bg-[#53BA83] text-[#FFFFFF] font-[600] text-[16px] leading-[21px] rounded-xl hover:bg-[#48a573] transition-all duration-200 shadow-[8px]"
                 >
-                  Get Started
+                  Open Account
                 </button>
               </div>
 
@@ -129,7 +129,7 @@
                   href="ResearchReport.html"
                   class="block py-2 px-4 text-[#53BA83] font-medium hover:bg-gray-50 rounded-lg transition-colors"
                 >
-                  Research Reports
+                  Research
                 </a>
               </li>
               <li>
@@ -146,7 +146,7 @@
               <button
                 class="py-3 bg-[#53BA83] text-white font-semibold rounded-xl hover:bg-[#48a573] transition-all"
               >
-                Get Started
+                Open Account
               </button>
             </div>
           </div>
@@ -312,6 +312,32 @@
             Business
           </p>
         </div>
+
+        <div
+          class="w-[163px] h-[50px] px-[10px] border border-[#53BA83] hidden 2xl:flex justify-center items-center rounded-full bg-[#53BA8305]"
+        >
+          <img
+            src="./Assets/icons/business.png"
+            alt=""
+            class="w-[24px] h-[24px] mr-[3px]"
+          />
+          <p class="font-[500] text-[24px] leading-[19.5px] text-[#53BA83]">
+            Sports
+          </p>
+        </div>
+
+        <div
+          class="w-[163px] h-[50px] px-[10px] border border-[#53BA83] hidden 2xl:flex justify-center items-center rounded-full bg-[#53BA8305]"
+        >
+          <img
+            src="./Assets/icons/business.png"
+            alt=""
+            class="w-[24px] h-[24px] mr-[3px]"
+          />
+          <p class="font-[500] text-[24px] leading-[19.5px] text-[#53BA83]">
+            Business
+          </p>
+        </div>
       </div>
     </div>
 
@@ -358,7 +384,9 @@
         class="w-full md:w-[70%] bg-[#F7F7F7] md:bg-[#FFFFFF] py-[50px] md:py-0"
       >
         <div class="grid grid-cols-2 gap-[16px] md:gap-[30px] mx-[7vw] md:mx-0">
-          <div class="shadow-md md:shadow-none rounded-[12px] border md:border-none">
+          <div
+            class="shadow-md md:shadow-none rounded-[12px] border md:border-none"
+          >
             <div
               class="h-[140px] md:h-[298px] md:border border-[#D3D3D3] rounded-[18px] md:bg-[#FFFFFF]"
             >
@@ -409,7 +437,9 @@
             </div>
           </div>
 
-          <div class="shadow-md md:shadow-none rounded-[12px] border md:border-none">
+          <div
+            class="shadow-md md:shadow-none rounded-[12px] border md:border-none"
+          >
             <div
               class="h-[140px] md:h-[298px] md:border border-[#D3D3D3] rounded-[18px] md:bg-[#FFFFFF]"
             >
@@ -460,7 +490,9 @@
             </div>
           </div>
 
-          <div class="shadow-md md:shadow-none rounded-[12px] border md:border-none">
+          <div
+            class="shadow-md md:shadow-none rounded-[12px] border md:border-none"
+          >
             <div
               class="h-[140px] md:h-[298px] md:border border-[#D3D3D3] rounded-[18px] md:bg-[#FFFFFF]"
             >
@@ -511,7 +543,9 @@
             </div>
           </div>
 
-          <div class="shadow-md md:shadow-none rounded-[12px] border md:border-none">
+          <div
+            class="shadow-md md:shadow-none rounded-[12px] border md:border-none"
+          >
             <div
               class="h-[140px] md:h-[298px] md:border border-[#D3D3D3] rounded-[18px] md:bg-[#FFFFFF]"
             >
@@ -564,7 +598,7 @@
         </div>
       </div>
       <div class="w-full md:w-[30%]">
-        <div class="flex justify-center md:justify-end mt-[26px] md:mt-0">
+        <!-- <div class="flex justify-center md:justify-end mt-[26px] md:mt-0">
           <div
             class="md:border border-[#D3D3D3] w-[335px] rounded-[18px] md:p-[18px] h-[600px]"
           >
@@ -734,6 +768,25 @@
               </div>
             </div>
           </div>
+        </div> -->
+
+        <div class="flex justify-center md:justify-end mt-[26px] md:mt-0">
+          <div
+            class="md:border border-[#D3D3D3] w-[335px] rounded-[18px] md:p-[18px] min-h-max overflow-y-auto bg-white shadow-sm"
+          >
+            <h3
+              class="font-[500] text-[24px] leading-[35px] text-[#0B1B0C] md:text-[#8A8A8A]"
+            >
+              Featured Stocks
+            </h3>
+
+            <div id="stocks-container" class="mt-[12px]">
+              <!-- Stocks will be inserted here dynamically -->
+              <p class="text-center text-gray-500 py-10">
+                Loading top volume stocks...
+              </p>
+            </div>
+          </div>
         </div>
         <!-- <div class="flex justify-end mt-[28px]">
           <div
@@ -852,7 +905,7 @@
       </div>
     </div>
     <!-- -------------Have Questions?-------------- -->
-    <div class="md:mx-[5vw] md:mt-[58px]">
+    <div class="mt-[48px] md:mx-[5vw] md:mt-[58px]">
       <div
         class="w-full md:h-[380px] md:rounded-[40px] flex flex-col justify-center items-center bg-[#53BA83] md:bg-[linear-gradient(180deg,#53ba83_0%,#3fb950_100%)] py-[50px] md:py-0"
       >
@@ -1074,6 +1127,9 @@
         }
       });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="./FeatureStocks.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>

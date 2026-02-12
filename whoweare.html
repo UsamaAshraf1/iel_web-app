@@ -69,7 +69,7 @@
                     href="ResearchReport.html"
                     class="text-[#0B1B0C] font-[600] text-[16px] leading-[21px] hover:text-[#53BA83] transition-colors duration-200"
                   >
-                    Research Reports
+                    Research
                   </a>
                 </li>
                 <li>
@@ -90,7 +90,7 @@
                 <button
                   class="px-[19px] py-[10px] bg-[#53BA83] text-[#FFFFFF] font-[600] text-[16px] leading-[21px] rounded-xl hover:bg-[#48a573] transition-all duration-200 shadow-[8px]"
                 >
-                  Get Started
+                  Open Account
                 </button>
               </div>
 
@@ -137,7 +137,7 @@
                   href="ResearchReport.html"
                   class="block py-2 px-4 text-[#0B1B0C] font-medium hover:bg-gray-50 rounded-lg transition-colors"
                 >
-                  Research Reports
+                  Research
                 </a>
               </li>
               <li>
@@ -154,7 +154,7 @@
               <button
                 class="py-3 bg-[#53BA83] text-white font-semibold rounded-xl hover:bg-[#48a573] transition-all"
               >
-                Get Started
+                Open Account
               </button>
             </div>
           </div>
@@ -192,11 +192,31 @@
                 ambition.
               </p>
 
-              <button
+              <!-- <button
                 class="mt-[23px] bg-[#53BA83] px-[19px] py-[10px] w-[220px] h-[53px] rounded-[8px] font-[600] text-[16px] leading-[21px] text-[#FFFFFF]"
               >
                 Try Now
-              </button>
+              </button> -->
+              <div class="flex justify-center items-center">
+                <div class="mt-[42px] flex flex-col md:flex-row">
+                  <div class="w-[200px] md:w-[192px] w-full">
+                    <img
+                      src="./Assets/iphone.png"
+                      alt=""
+                      class="h-[64px] w-full"
+                    />
+                  </div>
+                  <div
+                    class="w-[200px] md:w-[220px] mt-[16px] md:mt-0 md:ml-[16px]"
+                  >
+                    <img
+                      src="./Assets/android.png"
+                      alt=""
+                      class="h-[64px] w-full"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -371,7 +391,7 @@
                 class="w-full h-full object-cover rounded-[18px]"
               />
             </div>
-            <div class="mt-[10px] text-center">
+            <div class="mt-[10px] text-center px-[20px] md:px-0">
               <p
                 class="font-[500] text-[11px] md:text-[22px] leading-[16px] md:leading-[35px] text-[#0B1B0C] md:text-[#8A8A8A]"
               >
@@ -392,7 +412,7 @@
                 class="w-full h-full object-cover rounded-[18px]"
               />
             </div>
-            <div class="mt-[10px] text-center">
+            <div class="mt-[10px] text-center px-[20px] md:px-0">
               <p
                 class="font-[500] text-[11px] md:text-[22px] leading-[16px] md:leading-[35px] text-[#0B1B0C] md:text-[#8A8A8A]"
               >
@@ -429,7 +449,7 @@
                 class="w-full h-full object-cover rounded-[18px]"
               />
             </div>
-            <div class="mt-[10px] text-center">
+            <div class="mt-[10px] text-center px-[20px] md:px-0">
               <p
                 class="font-[500] text-[11px] md:text-[22px] leading-[16px] md:leading-[35px] text-[#0B1B0C] md:text-[#8A8A8A]"
               >
@@ -450,7 +470,7 @@
                 class="w-full h-full object-cover rounded-[18px]"
               />
             </div>
-            <div class="mt-[10px] text-center">
+            <div class="mt-[10px] text-center px-[20px] md:px-0">
               <p
                 class="font-[500] text-[11px] md:text-[22px] leading-[16px] md:leading-[35px] text-[#0B1B0C] md:text-[#8A8A8A]"
               >
@@ -471,7 +491,7 @@
                 class="w-full h-full object-cover rounded-[18px]"
               />
             </div>
-            <div class="mt-[10px] text-center">
+            <div class="mt-[10px] text-center px-[20px] md:px-0">
               <p
                 class="font-[500] text-[11px] md:text-[22px] leading-[16px] md:leading-[35px] text-[#0B1B0C] md:text-[#8A8A8A]"
               >
@@ -515,7 +535,7 @@
         <div class="autoplay-new-slider">
           <div class="slide">
             <div
-              class="md:h-[300px] bg-[#FFFFFF2E] mt-[30px] p-[24px] rounded-[12px]"
+              class="md:h-[300px] bg-[#FFFFFF2E] mt-[30px] p-[24px] rounded-[12px] mx-[10px]"
             >
               <div class="flex justify-center items-center">
                 <img
@@ -572,7 +592,7 @@
 
           <div class="slide">
             <div
-              class="md:h-[300px] bg-[#FFFFFF2E] mt-[30px] p-[24px] rounded-[12px]"
+              class="md:h-[300px] bg-[#FFFFFF2E] mt-[30px] p-[24px] rounded-[12px] mx-[10px]"
             >
               <div class="flex justify-center items-center">
                 <img
@@ -1119,14 +1139,14 @@
         $(".autoplay-new-slider").slick({
           slidesToShow: 1,
           slidesToScroll: 1,
-          autoplay: true, // still works
-          autoplaySpeed: 4000, // changed to 4 seconds – feels more natural
+          autoplay: true,
+          autoplaySpeed: 4000,
           speed: 800,
-          arrows: false, // we hide default arrows
+          arrows: false,
           dots: false,
-          pauseOnHover: true, // good UX – pauses when user hovers
+          pauseOnHover: true,
           infinite: true,
-          adaptiveHeight: true,
+          adaptiveHeight: false,
         });
 
         // Connect custom buttons
@@ -1139,6 +1159,9 @@
         });
       });
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./supabase.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>

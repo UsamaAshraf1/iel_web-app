@@ -2,41 +2,102 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Contact Form</title>
-
-    <!-- 1. Load the Supabase library FIRST -->
-    <!-- or more explicit version: -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script> -->
+    <title>Contact Form – Profiles</title>
   </head>
   <body>
-    <!-- your HTML form here -->
 
-    <!-- 2. Your own script comes AFTER the library is loaded -->
+    <h2>Supabase Profiles Example</h2>
+    <button onclick="fetchProfiles()">Load Profiles</button>
+    <pre id="result">Click the button to fetch data...</pre>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
     <script>
-      // At this point Supabase SHOULD be available
+      // ────────────────────────────────────────────────
+      //  Supabase Initialization (same as before)
+      // ────────────────────────────────────────────────
+      const supabaseUrl  = "https://bfxmfaakufrmzcxhtgfw.supabase.co";
+      const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJmeG1mYWFrdWZybXpjeGh0Z2Z3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4MTQzMTIsImV4cCI6MjA3NTM5MDMxMn0.qtNn0qXNhn8ol8fTSb2Hp9nQkYfFA2Y_Zec4LuISPZQ";
 
-      console.log("Is Supabase defined?", typeof Supabase !== "undefined");
-      console.log("Supabase object keys:", Object.keys(Supabase || {}));
-
-      const supabaseUrl = "https://bfxmfaakufrmzcxhtgfw.supabase.co";
-      const supabaseKey =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJmeG1mYWFrdWZybXpjeGh0Z2Z3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4MTQzMTIsImV4cCI6MjA3NTM5MDMxMn0.qtNn0qXNhn8ol8fTSb2Hp9nQkYfFA2Y_Zec4LuISPZQ";
+      let supabaseClient = null;
 
       function initSupabase() {
-        if (typeof Supabase === "undefined") {
-          console.warn("Supabase not loaded yet, waiting...");
+        if (typeof supabase === "undefined") {
+          console.warn("supabase global not ready yet, waiting...");
           setTimeout(initSupabase, 100);
           return;
         }
 
-        // Supabase is now available
-        const supabaseClient = Supabase.createClient(supabaseUrl, supabaseKey);
-        console.log("Client ready!", supabaseClient);
+        const { createClient } = supabase;
+        supabaseClient = createClient(supabaseUrl, supabaseKey);
+        console.log("Supabase client initialized!", supabaseClient);
       }
 
       initSupabase();
+
+      // ────────────────────────────────────────────────
+      //  Function to get data from 'profiles' table
+      // ────────────────────────────────────────────────
+      async function getProfiles({ limit = 100, select = "*" } = {}) {
+        if (!supabaseClient) {
+          throw new Error("Supabase client not initialized yet");
+        }
+
+        try {
+          const { data, error, count } = await supabaseClient
+            .from('profiles')
+            .select(select, { count: 'exact' })   // 'exact' gives total count (useful for pagination)
+            .limit(limit);
+
+          if (error) {
+            console.error("Query error:", error);
+            return { success: false, error: error.message, details: error };
+          }
+
+          return {
+            success: true,
+            data,                // array of profile objects
+            count,               // total rows matching query (ignoring limit)
+            fetched: data.length
+          };
+        } catch (err) {
+          console.error("Unexpected error:", err);
+          return { success: false, error: err.message };
+        }
+      }
+
+      // ────────────────────────────────────────────────
+      //  Example usage – button handler
+      // ────────────────────────────────────────────────
+      async function fetchProfiles() {
+        const resultEl = document.getElementById("result");
+        resultEl.textContent = "Loading profiles...";
+
+        // You can customize: select specific columns, add filters, etc.
+        const result = await getProfiles({
+          limit: 20,
+          select: "id, username, full_name, avatar_url, updated_at"
+          // You could also add filters like:
+          // .eq('username', 'usama')
+          // .order('updated_at', { ascending: false })
+        });
+
+        if (!result.success) {
+          resultEl.textContent = `Error: ${result.error}`;
+          console.error(result);
+          return;
+        }
+
+        if (result.data.length === 0) {
+          resultEl.textContent = "No profiles found.";
+          return;
+        }
+
+        // Pretty-print the result
+        resultEl.textContent =
+          `Fetched ${result.fetched} of ${result.count} profiles:\n\n` +
+          JSON.stringify(result.data, null, 2);
+      }
     </script>
   </body>
 </html>
