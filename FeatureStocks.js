@@ -89,12 +89,69 @@ async function loadTopStocks() {
     const formattedVolume = formatVolume(Volume);
     const isPositive = parseFloat(Volume) >= 0;
 
+    function getColorFromSymbol(str) {
+      let hash = 0;
+      for (let i = 0; i < str.length; i++) {
+        hash = str.charCodeAt(i) + ((hash << 5) - hash);
+      }
+      const colors = [
+        "#3B82F6",
+        "#8B5CF6",
+        "#EC4899",
+        "#F59E0B",
+        "#10B981",
+        "#6366F1",
+        "#EF4444",
+        "#14B8A6",
+        "#F97316",
+        "#06B6D4",
+        "#A855F7",
+        "#22D3EE",
+        "#84CC16",
+        "#F43F5E",
+        "#06B6D4",
+        "#6366F1",
+      ];
+      return colors[Math.abs(hash) % colors.length];
+    }
+
+    const symbolClean = (stock.symbol || "?")
+      .toUpperCase()
+      .replace(/[^A-Z0-9]/g, "");
+    const displayText = symbolClean.length > 0 ? symbolClean : "N/A";
+
+    // Adjust font size based on length (similar logic to React Native version)
+    const logoSize = 52;
+    let fontSize = logoSize * 0.35;
+    if (displayText.length === 4) fontSize = logoSize * 0.28;
+    else if (displayText.length > 4) fontSize = logoSize * 0.22;
+
+    const bgColor = getColorFromSymbol(symbolClean || "UNKNOWN");
+
     const item = document.createElement("div");
     item.className = `flex justify-between items-center mt-[12px] px-[12px] py-[18px] border-x-[0.58px] border-t-[0.58px] md:border-x-0 md:border-t-0 border-b-[0.56px] border-[#F0F0F0] rounded-[14px] md:rounded-none last:border-b-0`;
 
     item.innerHTML = `
             <div class="flex items-center">
-              <img src="./Assets/trending_1.png" alt="${stock.symbol}" class="w-[52px] h-[52px] rounded-full" />
+             <div style="
+        width: ${logoSize}px;
+        height: ${logoSize}px;
+        background-color: ${bgColor};
+        border-radius: 9999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        flex-shrink: 0;
+      ">
+        <span style="
+          color: white;
+          font-weight: 600;
+          font-size: ${fontSize}px;
+          line-height: 1;
+          letter-spacing: -0.5px;
+        ">${displayText}</span>
+      </div>
               <p class="ml-[14px] font-[600] text-[16px] leading-[24px] text-[#0B1B0C]">
                 ${stock.symbol}
               </p>

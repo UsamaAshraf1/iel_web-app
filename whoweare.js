@@ -26,25 +26,33 @@ const messageDiv = document.getElementById("form-message");
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  // Disable button & show loading
   submitBtn.disabled = true;
   btnText.textContent = "Sending...";
   messageDiv.classList.add("hidden");
 
   const formData = new FormData(form);
+  const helps = formData.getAll("helps");
+  console.log("Selected helps:", helps);
+  // ── Collect regular fields ──
   const data = {
-    full_name: formData.get("full_name").trim(),
-    email: formData.get("email").trim(),
+    full_name: formData.get("full_name")?.trim() || null,
+    email: formData.get("email")?.trim() || null,
     phone: formData.get("phone")?.trim() || null,
-    subject: formData.get("subject").trim(),
-    message: formData.get("message").trim(),
+    subject: formData.get("subject")?.trim() || null,
+    message: formData.get("message")?.trim() || null,
+    // ── NEW: Collect all checked goals as array ──
+    helps: helps.length > 0 ? helps : null, // returns string[] or empty array
   };
 
+  // Optional: basic frontend validation
+  if (!data.full_name || !data.email || !data.subject || !data.message) {
+    showError("Please fill in all required fields.");
+    resetButton();
+    return;
+  }
+
   try {
-    const { data: response, error } = await supabaseClient
-      .from("contact")
-      .insert([data])
-      .select();
+    const { error } = await supabaseClient.from("contact").insert([data]);
 
     if (error) throw error;
 
@@ -56,14 +64,19 @@ form.addEventListener("submit", async (e) => {
     form.reset();
   } catch (err) {
     console.error("Submission error:", err);
-    messageDiv.textContent =
-      "Sorry, something went wrong. Please try again later.";
+    showError("Sorry, something went wrong. Please try again later.");
+  } finally {
+    resetButton();
+  }
+
+  function showError(msg) {
+    messageDiv.textContent = msg;
     messageDiv.classList.remove("hidden", "text-[#53BA83]");
     messageDiv.classList.add("text-red-400");
-  } finally {
+  }
+
+  function resetButton() {
     submitBtn.disabled = false;
     btnText.textContent = "Send Message";
   }
 });
-
-
